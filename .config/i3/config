@@ -218,10 +218,10 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always feh --bg-fill Pictures/wallpaper.jpg
 exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
 # FIXME: dpi doesn't work properly for title bars
-exec_always xrandr --dpi 96
+#exec_always xrandr --dpi 96
 
 # start with
-#exec spotify
+exec spotify
 
 # for opacity in rofi
 # -f for fade effect
@@ -232,10 +232,8 @@ assign [class="Google-chrome"] $ws1
 assign [class="Gnome-terminal"] $ws3
 assign [class="Opera"] $ws8
 assign [class="Firefox"] $ws9
-# FIXME: spotify isn't working correctly
-#assign [class="Spotify"] $ws10
+assign [class="Spotify"] $ws10
+for_window [class="Spotify"] move to workspace $ws10
 
-# second monitor test
-workspace $ws10 output secondary
-
-
+# second monitor assign
+workspace $ws10 output DP-1-1
