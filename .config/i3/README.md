@@ -5,3 +5,6 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 * `feh` is for setting background image.
 * `arandr` is used to generate the `xrandr` output with the addition of `--rate 59.94`.
 * [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) for icon fonts ([cheatsheet](https://fontawesome.com/cheatsheet)).
+* `rofi` is used instead of `dmenu`.
+* `i3blocks` instead of `i3status`.
+* `compton` for `rofi` opacity, `-f` for fade effect.
