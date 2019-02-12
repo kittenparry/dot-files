@@ -94,8 +94,8 @@ bindsym $mod+a focus parent
 
 # workspace variables
 set $ws1 "1: "
-set $ws2 "2"
-set $ws3 "3: "
+set $ws2 "2: "
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6: "
@@ -200,7 +200,7 @@ bar {
 }
 
 # custom keybinds
-bindsym $mod+shift+x exec i3lock --color "$bg-color"
+bindsym $mod+shift+x exec i3lock --image ~/Pictures/lock.png --color "$bg-color"
 bindsym $mod+d exec rofi -show run
 
 # Pulse Audio controls
@@ -229,7 +229,7 @@ exec spotify
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
-assign [class="Gnome-terminal"] $ws3
+assign [class="Gnome-terminal"] $ws2
 assign [class="Opera"] $ws8
 assign [class="Firefox"] $ws9
 assign [class="Spotify"] $ws10
