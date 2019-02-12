@@ -93,20 +93,20 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace variables
-set $ws1 "1"
+set $ws1 "1: "
 set $ws2 "2"
-set $ws3 "3"
+set $ws3 "3: "
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws1
+bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
@@ -137,34 +137,64 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 10 px or 10 ppt
+	bindsym k resize grow height 10 px or 10 ppt
+	bindsym l resize shrink height 10 px or 10 ppt
+	bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
+# colours from here
+# https://github.com/bookercodes/dotfiles/blob/ubuntu/.i3/config
+
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# custom colours
+set $bg-color-2 #6c7893
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color-2          $text-color          #00ff00
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
+# hides vertical/horizontal indicators
+hide_edge_borders both
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+	status_command i3status
+	colors {
+		background $bg-color
+  	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	}
 }
 
 bindsym $mod+shift+x exec i3lock
@@ -183,10 +213,19 @@ bindsym XF86AudioPrev exec playerctl previous
 # background and monitor properties
 exec_always feh --bg-fill Pictures/wallpaper.jpg
 exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
+# FIXME: dpi doesn't work properly for title bars
+exec_always xrandr --dpi 96
 
 # start with
-#exec_always spotify
+#exec spotify
 
 # assign to workspaces
+assign [class="Google-chrome"] $ws1
+assign [class="Gnome-terminal"] $ws3
+assign [class="Opera"] $ws8
+assign [class="Firefox"] $ws9
 # FIXME: spotify isn't working correctly
 #assign [class="Spotify"] $ws10
+
+# second monitor test
+workspace $ws10 output secondary
