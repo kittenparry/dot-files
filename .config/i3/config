@@ -209,15 +209,6 @@ bar {
 	}
 }
 
-# custom keybinds
-bindsym $mod+shift+x exec i3lock --image ~/Pictures/lock.png --color "$bg-color"
-bindsym $mod+d exec rofi -show run
-# grave is `
-bindsym $mod+grave workspace back_and_forth
-bindsym $mod+Shift+grave move container to workspace back_and_forth
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -233,7 +224,17 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always feh --bg-fill Pictures/wallpaper.jpg
 exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
 # FIXME: dpi doesn't work properly for title bars
-#exec_always xrandr --dpi 96
+# better works with quotes, still not on start and need to refresh a few times
+exec_always "xrandr --dpi 96"
+
+# custom keybinds
+bindsym $mod+shift+x exec i3lock --color "$bg-color" --ignore-empty-password #--image ~/Pictures/lock.png
+bindsym $mod+d exec rofi -show run
+# grave is `
+bindsym $mod+grave workspace back_and_forth
+bindsym $mod+Shift+grave move container to workspace back_and_forth
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # start with
 exec spotify --disable-smooth-scrolling
@@ -242,6 +243,7 @@ exec steam
 # program can't seem to work when executed from other directories
 # will fix later on
 exec cd Dropbox ; python3 Log\ Recorder.py ; cd ..
+exec --no-startup-id dropbox start
 
 # for opacity in rofi
 # -f for fade effect
