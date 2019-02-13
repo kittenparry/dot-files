@@ -230,7 +230,7 @@ exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate norma
 #exec_always xrandr --dpi 96
 
 # start with
-exec spotify
+exec spotify --disable-smooth-scrolling
 # program can't seem to work when executed from other directories
 # will fix later on
 exec cd Dropbox ; python3 Log\ Recorder.py ; cd ..
