@@ -10,6 +10,7 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 * `i3blocks` instead of `i3status`.
 * `compton` for `rofi` opacity, `-f` for fade effect.
 * `imagemagick` to convert jpg to png and `gimp` to resize the image.
+* `i3-gaps` for gaps, installed following this [gist](https://gist.github.com/boreycutts/6417980039760d9d9dac0dd2148d4783).
 
 ### Notes
 * `ranger` as file manager.

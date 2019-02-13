@@ -192,6 +192,19 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
+# i3-gaps
+for_window [class="^.*"] border pixel 0
+gaps inner 20
+gaps outer 10
+bindsym $mod+F1 gaps inner current set 20 ; gaps outer current set 10
+bindsym $mod+F2 gaps inner current set 0 ; gaps outer current set 0
+bindsym $mod+F3 gaps inner current plus 10
+bindsym $mod+F4 gaps inner current minus 10
+bindsym $mod+F5 gaps outer current plus 10
+bindsym $mod+F6 gaps outer current minus 10
+
+
 bar {
 	#status_command i3status
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
