@@ -210,6 +210,11 @@ bar {
 # custom keybinds
 bindsym $mod+shift+x exec i3lock --image ~/Pictures/lock.png --color "$bg-color"
 bindsym $mod+d exec rofi -show run
+# grave is `
+bindsym $mod+grave workspace back_and_forth
+bindsym $mod+Shift+grave move container to workspace back_and_forth
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
