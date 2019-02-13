@@ -230,7 +230,8 @@ exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate norma
 
 # start with
 exec spotify --disable-smooth-scrolling
-exec discord
+#doesn't seem to work for discord
+exec discord --disable-smooth-scrolling
 exec steam
 # program can't seem to work when executed from other directories
 # will fix later on
