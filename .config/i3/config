@@ -197,6 +197,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 for_window [class="^.*"] border pixel 0
 gaps inner 20
 gaps outer 10
+# below needs testing
+workspace $ws10 gaps inner 0
+workspace $ws10 gaps outer 0
 bindsym $mod+F1 gaps inner current set 20 ; gaps outer current set 10
 bindsym $mod+F2 gaps inner current set 0 ; gaps outer current set 0
 bindsym $mod+F3 gaps inner current plus 10

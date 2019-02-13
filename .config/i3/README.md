@@ -13,5 +13,10 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 * `i3-gaps` for gaps, installed following this [gist](https://gist.github.com/boreycutts/6417980039760d9d9dac0dd2148d4783).
 
 ### Notes
-* `ranger` as file manager.
+* `ranger` as file manager. also `pcmanfm`?
 * `sxiv` as image viewer.
+
+### Current Problems
+* `xrandr --dpi 96` doesn't work
+  * also possibly effects tray icons
+* spotify didn't load correctly last time
