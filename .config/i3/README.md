@@ -18,5 +18,5 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 
 ### Current Problems
 * `xrandr --dpi 96` doesn't work
-  * also possibly effects tray icons
+  * also possibly affects tray icons
 * spotify didn't load correctly last time
