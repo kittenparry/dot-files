@@ -105,8 +105,10 @@ set $ws4 "4: "
 set $ws5 "5: "
 #opera
 set $ws6 "6: "
-set $ws7 "7"
-set $ws8 "8"
+#folder
+set $ws7 "7: "
+#file-image
+set $ws8 "8: "
 #firefox
 set $ws9 "9: "
 #spotify-discord
@@ -235,7 +237,6 @@ exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate norma
 
 # start with
 exec spotify --disable-smooth-scrolling
-#doesn't seem to work for discord
 exec discord --disable-smooth-scrolling
 exec steam
 # program can't seem to work when executed from other directories
@@ -250,10 +251,12 @@ exec cd Dropbox ; python3 Log\ Recorder.py ; cd ..
 assign [class="Google-chrome"] $ws1
 assign [class="Gnome-terminal"] $ws2
 assign [class="Code"] $ws3
-# my log recorder program
+# my log recorder program in python tk
 assign [class="Tk"] $ws4
 assign [class="Steam"] $ws5
 assign [class="Opera"] $ws6
+assign [class="Nautilus"] $ws7
+assign [class="Sxiv"] $ws8
 assign [class="Firefox"] $ws9
 assign [class="Spotify"] $ws10
 assign [class="discord"] $ws10
