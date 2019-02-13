@@ -93,16 +93,25 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace variables
-set $ws1 "1: " #Chrome
-set $ws2 "2: " #Terminal
-set $ws3 "3: " #Window-Maximize
-set $ws4 "4: " #Steam
-set $ws5 "5: " #Discord
-set $ws6 "6: " #Opera
-set $ws7 "7"
+#chrome
+set $ws1 "1: "
+#terminal
+set $ws2 "2: "
+#code
+set $ws3 "3: "
+#window-maximize
+set $ws4 "4: "
+#steam
+set $ws5 "5: "
+#discord
+set $ws6 "6: "
+#opera
+set $ws7 "7: "
 set $ws8 "8"
-set $ws9 "9: " #Firefox
-set $ws10 "10: " #Spotify
+#firefox
+set $ws9 "9: "
+#spotify
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -233,10 +242,11 @@ exec cd Dropbox ; python3 Log\ Recorder.py ; cd ..
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
 assign [class="Gnome-terminal"] $ws2
+assign [class="Code"] $ws3
 # my log recorder program
-assign [class="Tk"] $ws3
-assign [class="Steam"] $ws4
-assign [class="Opera"] $ws6
+assign [class="Tk"] $ws4
+assign [class="Steam"] $ws5
+assign [class="Opera"] $ws7
 assign [class="Firefox"] $ws9
 assign [class="Spotify"] $ws10
 
