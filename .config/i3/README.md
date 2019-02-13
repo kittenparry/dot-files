@@ -14,3 +14,4 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 ### Notes
 * `ranger` as file manager.
 * `sxiv` as image viewer.
+* `gitg` as gui git program.
