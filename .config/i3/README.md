@@ -10,3 +10,8 @@ Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7Zmk
 * `i3blocks` instead of `i3status`.
 * `compton` for `rofi` opacity, `-f` for fade effect.
 * `imagemagick` to convert jpg to png and `gimp` to resize the image.
+
+
+
+* `ranger` as file manager
+* `sxiv` for image viewing
