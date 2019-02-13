@@ -103,15 +103,14 @@ set $ws3 "3: "
 set $ws4 "4: "
 #steam
 set $ws5 "5: "
-#discord
-set $ws6 "6: "
 #opera
-set $ws7 "7: "
+set $ws6 "6: "
+set $ws7 "7"
 set $ws8 "8"
 #firefox
 set $ws9 "9: "
-#spotify
-set $ws10 "10: "
+#spotify-discord
+set $ws10 "10: -"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -231,6 +230,8 @@ exec_always xrandr --output DP-1-1 --mode 1280x1024 --pos 1920x56 --rotate norma
 
 # start with
 exec spotify --disable-smooth-scrolling
+exec discord
+exec steam
 # program can't seem to work when executed from other directories
 # will fix later on
 exec cd Dropbox ; python3 Log\ Recorder.py ; cd ..
@@ -246,14 +247,16 @@ assign [class="Code"] $ws3
 # my log recorder program
 assign [class="Tk"] $ws4
 assign [class="Steam"] $ws5
-assign [class="Opera"] $ws7
+assign [class="Opera"] $ws6
 assign [class="Firefox"] $ws9
 assign [class="Spotify"] $ws10
+assign [class="discord"] $ws10
 
 # after launch assigns
 for_window [class="Spotify"] move to workspace $ws10
 # so the friends section is smaller than the main window
 for_window [class="Steam"] resize shrink width 10 px or 10 ppt
+for_window [class="discord"] layout tabbed
 
 # second monitor assign
 workspace $ws10 output DP-1-1
