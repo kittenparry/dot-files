@@ -1,4 +1,4 @@
-## My i3 settings
+## My Ubuntu i3 settings
 Used [this](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf) video series as a guide.
 
 * [playerctl](https://github.com/acrisci/playerctl) is needed for media keys (and possibly `pactl` if you're not on Ubuntu).
