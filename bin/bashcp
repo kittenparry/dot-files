@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# boot script to copy .bash_history to Dropbox
+# add this line to crontab -e
+# @reboot ./bin/bashcp
+
+cp ~/.bash_history ~/Dropbox/
