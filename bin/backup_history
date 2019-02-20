@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# boot script to copy .bash_history to Dropbox
+# to Manjaro folder so it won't get overwritten in Ubuntu
+
+cp ~/.bash_history ~/Dropbox/Manjaro/
