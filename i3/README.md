@@ -6,7 +6,7 @@
 * `gpg --generate-key`, `gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv $KEY` before being able to `yaourt -S dropbox`.
 * `playerctl` installed for media keys.
 * After installing `polybar`, `install -Dm644 /usr/share/doc/polybar/ config $HOME/.config/polybar/config` & `chmod +x ~/.config/polybar/launch.sh`.
-
+* `ip addr` to get network interface for network module of `polybar`.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.

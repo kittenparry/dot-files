@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio memory cpu eth temperature date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
@@ -221,7 +221,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = enp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -243,13 +243,13 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eno1
+interface = enp2s0
 interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %downspeed% %upspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
