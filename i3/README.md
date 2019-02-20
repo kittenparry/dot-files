@@ -10,3 +10,4 @@
 ### Stuff
 * `rofi` is used instead of `dmenu`.
 * `xterm` instead of `urxvt`.
+* `mocp` terminal music player.
