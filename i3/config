@@ -104,7 +104,7 @@ bindsym $mod+Shift+Right move right
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+bindsym $mod+q split toggle ; exec notify-send 'tiling toggled'
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
