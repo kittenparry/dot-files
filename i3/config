@@ -449,6 +449,8 @@ bindsym $mod+grave workspace back_and_forth
 bindsym $mod+Shift+grave move container to workspace back_and_forth
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+# mouse bind, not as good a program sa sharex
+bindsym Ctrl+Print exec gnome-screenshot -i
 
 # second monitor ws assign
 workspace $ws10 output $mon2
