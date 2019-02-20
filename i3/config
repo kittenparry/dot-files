@@ -424,7 +424,14 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Custom below?
+# CUSTOM BELOW
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+#bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # monitor name variables
 set $mon1 HDMI-0
 set $mon2 DP-1-1
@@ -448,8 +455,12 @@ workspace $ws10 output $mon2
 focus_follows_mouse no
 
 # start with
+exec steam
+exec spotify --no-startup-id --disable-smooth-scrolling
+exec discord --no-startup-id --disable-smooth-scrolling
 exec cd Dropbox ; python Log\ Recorder.py ; cd ..
 exec --no-startup-id dropbox start
+exec --no-startup-id deluge
 
 # assign to workspaces
 assign [class="Firefox"] $ws1
@@ -461,8 +472,14 @@ assign [class="Opera"] $ws5
 assign [class="Pcmanfm"] $ws6
 # assign [class="XTerm ranger"] $ws6
 # assign [class="Sxiv"] $ws6
-# assign [class="Steam"] $ws7
+assign [class="Steam"] $ws7
 assign [class="Deluge"] $ws8
 # assign [class="Firefox"] $ws9
-# assign [class="Spotify"] $ws10
-# assign [class="discord"] $ws10
+assign [class="Spotify"] $ws10
+assign [class="discord"] $ws10
+
+# after launch assigns
+for_window [class="Spotify"] move to workspace $ws10
+# so the friends section is smaller than the main window
+for_window [class="Steam"] resize shrink width 10 px or 10 ppt
+for_window [class="discord"] layout tabbed
