@@ -14,3 +14,4 @@
 * `mocp` terminal music player.
 * `gnome-screenshot -i` for screenshot taking.
 * `polybar` instead of `i3bar`.
+* `fd` for file search.
