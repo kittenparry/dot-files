@@ -472,7 +472,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
 # assign [class="XTerm"] $ws2
-assign [class="Code"] $ws3
+assign [class="code-oss"] $ws2
 # my log recorder program in python tk
 assign [class="Tk"] $ws4
 assign [class="Opera"] $ws5

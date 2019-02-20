@@ -56,7 +56,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = mpd
+modules-center = spotify
 modules-right = filesystem xbacklight pulseaudio memory cpu eth temperature date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
@@ -422,3 +422,20 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+[module/spotify]
+; https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
+type = custom/script
+exec = ~/.config/polybar/scripts/spotify.sh
+interval = 1
+
+;format = <label>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+format-underline = #0f0
+format-prefix = "  "
+format-prefix-foreground = #0f0
+label = %output:0:150%
+
+#######################
