@@ -460,6 +460,7 @@ assign [class="Pcmanfm"] $ws6
 # assign [class="XTerm ranger"] $ws6
 # assign [class="Sxiv"] $ws6
 # assign [class="Steam"] $ws7
+assign [class="Deluge"] $ws8
 # assign [class="Firefox"] $ws9
 # assign [class="Spotify"] $ws10
 # assign [class="discord"] $ws10
