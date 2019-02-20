@@ -327,33 +327,33 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position top
+# bar {
+# 	i3bar_command i3bar
+# 	status_command i3status
+# 	position top
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-	tray_output primary
-#	tray_output eDP1
+# ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+# 	tray_output primary
+# #	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+# 	bindsym button4 nop
+# 	bindsym button5 nop
+# #   font xft:URWGothic-Book 11
+# 	strip_workspace_numbers yes
 
-    colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+#     colors {
+#         background #222D31
+#         statusline #F9FAF9
+#         separator  #454947
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
-}
+# #                      border  backgr. text
+#         focused_workspace  #F9FAF9 #16a085 #292F34
+#         active_workspace   #595B5B #353836 #FDF6E3
+#         inactive_workspace #595B5B #222D31 #EEE8D5
+#         binding_mode       #16a085 #2C2C2C #F9FAF9
+#         urgent_workspace   #16a085 #FDF6E3 #E5201D
+#     }
+# }
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -451,8 +451,10 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 # mouse bind, not as good a program sa sharex
 bindsym Ctrl+Print exec gnome-screenshot -i
+bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
+workspace $ws9 output $mon2
 workspace $ws10 output $mon2
 # no mouse focus
 focus_follows_mouse no
@@ -464,11 +466,13 @@ exec discord --no-startup-id --disable-smooth-scrolling
 exec cd Dropbox ; python Log\ Recorder.py ; cd ..
 exec --no-startup-id dropbox start
 # exec --no-startup-id deluge
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
 # assign [class="XTerm"] $ws2
-# assign [class="Code"] $ws3
+assign [class="Code"] $ws3
 # my log recorder program in python tk
 assign [class="Tk"] $ws4
 assign [class="Opera"] $ws5
