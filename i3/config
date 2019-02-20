@@ -438,7 +438,6 @@ set $mon1 HDMI-0
 set $mon2 DP-1-1
 
 exec_always xrandr --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
-# doesn't work here as well
 exec_always xrandr --dpi 96
 
 # Custom binds
@@ -454,8 +453,8 @@ bindsym Ctrl+Print exec gnome-screenshot -i
 bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
-workspace $ws9 output $mon2
 workspace $ws10 output $mon2
+workspace $ws9 output $mon2
 # no mouse focus
 focus_follows_mouse no
 
@@ -463,7 +462,7 @@ focus_follows_mouse no
 exec steam
 exec spotify --no-startup-id --disable-smooth-scrolling
 exec discord --no-startup-id --disable-smooth-scrolling
-exec cd Dropbox ; python Log\ Recorder.py ; cd ..
+exec ./bin/run_log_recorder
 exec --no-startup-id dropbox start
 # exec --no-startup-id deluge
 # polybar
