@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio memory cpu wlan eth temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth temperature date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
