@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -141,16 +141,16 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
-set $ws9 9
-set $ws10 10
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -430,6 +430,8 @@ set $mon1 HDMI-0
 set $mon2 DP-1-1
 
 exec_always xrandr --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
+# doesn't work here as well
+exec_always xrandr --dpi 96
 
 # Custom binds
 bindsym $mod+Shift+x exec --no-startup-id blurlock
@@ -446,3 +448,18 @@ workspace $ws10 output $mon2
 # start with
 exec cd Dropbox ; python Log\ Recorder.py ; cd ..
 exec --no-startup-id dropbox start
+
+# assign to workspaces
+assign [class="Firefox"] $ws1
+# assign [class="XTerm"] $ws2
+# assign [class="Code"] $ws3
+# my log recorder program in python tk
+assign [class="Tk"] $ws4
+assign [class="Opera"] $ws5
+assign [class="Pcmanfm"] $ws6
+# assign [class="XTerm ranger"] $ws6
+# assign [class="Sxiv"] $ws6
+# assign [class="Steam"] $ws7
+# assign [class="Firefox"] $ws9
+# assign [class="Spotify"] $ws10
+# assign [class="discord"] $ws10
