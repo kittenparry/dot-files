@@ -25,3 +25,4 @@
 * `xdotool` to stimulate key presses.
 * `i3-msg` to send i3 commands.
 * `wal` ~~might be the future~~ creates a colour palette from an image. (`pywal`/`python-pywal`).
+* `gotop-bin`/`gotop`, similar to `htop`, less informative, more visuals.
