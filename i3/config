@@ -493,3 +493,4 @@ for_window [class="Spotify"] move to workspace $ws10
 # so the friends section is smaller than the main window
 for_window [class="Steam"] resize shrink width 10 px or 10 ppt
 for_window [class="discord"] layout tabbed
+for_window [class="Tk"] floating enable
