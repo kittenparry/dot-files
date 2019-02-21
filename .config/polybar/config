@@ -486,7 +486,7 @@ format-underline = #1db954
 # spotify
 format-prefix = "  "
 format-prefix-foreground = #1db954
-label = %output:0:150%
+label = %{A1:i3-msg '[class="Spotify"]' focus:}%output:0:150%%{A}
 
 [module/notification-reddit]
 ; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/notification-reddit/notification-reddit.sh
