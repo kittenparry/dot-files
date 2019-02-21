@@ -19,14 +19,14 @@ I can recall them off the top of my head and they are pretty basic anyway but if
 * `man` above all.
 * `cmatrix`.
 * `fltrdr` spritz-ish reading in terminal.
-  * space, play/pause
-  * v, toggle full line
-  * increase/decrease i/I left, o/O right side
-  * h/l prev/next word
-  * j/k decrease/increase wpm
-  * H/L prev/next sentence
-  * J/K prev/next chapter
-  * //? search forward/backward
-  * n/N go to next/prev search
-* `du` to check disk space a folder is taking
-* `df` disk space of all places
+  * space, play/pause.
+  * v, toggle full line.
+  * increase/decrease i/I left, o/O right side.
+  * h/l prev/next word.
+  * j/k decrease/increase wpm.
+  * H/L prev/next sentence.
+  * J/K prev/next chapter.
+  * //? search forward/backward.
+  * n/N go to next/prev search.
+* `du` to check disk space a folder is taking.
+* `df` disk space of all places.
