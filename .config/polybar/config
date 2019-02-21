@@ -60,7 +60,7 @@ font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;1
 modules-left = bspwm i3
 # not sure if running eth twice is healthy
 modules-center = spotify eth eth2
-modules-right = filesystem pulseaudio notification-reddit memory cpu temperature date powermenu
+modules-right = filesystem pulseaudio notification-reddit memory cpu temperature system-uptime-pretty date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
@@ -485,11 +485,18 @@ format-prefix = "  "
 format-prefix-foreground = #1db954
 label = %output:0:150%
 
-#######################
 [module/notification-reddit]
 ; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/notification-reddit/notification-reddit.sh
 type = custom/script
 exec = ~/.config/polybar/scripts/notification-reddit.sh
 format-padding = 2
 format-underline = #ff4500
+interval = 60
+
+[module/system-uptime-pretty]
+; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/system-uptime-pretty/system-uptime-pretty.sh
+type = custom/script
+exec = ~/.config/polybar/scripts/system-uptime-pretty.sh
+format-padding = 2
+format-underline = #f0f
 interval = 60
