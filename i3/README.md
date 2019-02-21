@@ -24,3 +24,4 @@
 * Fonts placed in `~/.local/share/fonts`, FontAwesome for icons.
 * `xdotool` to stimulate key presses.
 * `i3-msg` to send i3 commands.
+* `wal` might be the future. (`pywal`/`python-pywal`).

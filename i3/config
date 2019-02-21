@@ -437,6 +437,8 @@ bindsym XF86AudioPrev exec playerctl previous
 set $mon1 HDMI-0
 set $mon2 DP-1-1
 
+# -R probably kills the need for exec but whatevs
+exec wal -R -n -i ~/Pictures/wallpapers/wal.png
 exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 exec_always xrandr --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
 exec_always xrandr --dpi 96
