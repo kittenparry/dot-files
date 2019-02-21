@@ -17,3 +17,4 @@ I can recall them off the top of my head and they are pretty basic anyway but if
 * `xprop` to get information on programs.
 * `htop` system monitor, `ranger` file manager.
 * `man` above all.
+* `cmatrix`.
