@@ -155,9 +155,12 @@ ws-icon-5 = 6; 
 ws-icon-6 = 7; 
 # download , maybe instead use firefox 
 ws-icon-7 = 8; 
+# 
 ws-icon-8 = 9;
 # spotify discord
 ws-icon-9 = 10;  
+# user
+ws-icon-default = 
 
 
 ; Only show workspaces on the same output as the bar
@@ -487,4 +490,6 @@ label = %output:0:150%
 ; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/notification-reddit/notification-reddit.sh
 type = custom/script
 exec = ~/.config/polybar/scripts/notification-reddit.sh
+format-padding = 2
+format-underline = #ff4500
 interval = 60

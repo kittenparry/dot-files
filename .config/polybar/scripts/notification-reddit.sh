@@ -10,9 +10,9 @@ USERAGENT="polybar-scripts/notification-reddit:v1.0 u/username"
 notifications=$(curl -sf --user-agent "$USERAGENT" "$URL" | jq '.["data"]["children"] | length')
 
 if [ -n "$notifications" ] && [ "$notifications" -gt 0 ]; then
-	# reddit-alien
-	echo " $notifications"
+	# reddit-alien in reddit's colour
+	echo "%{Fff4500}{F-} $notifications"
 else
-	#reddit
-	echo ""
+	#reddit-alien in white
+	echo ""
 fi
