@@ -22,3 +22,4 @@
 * or `dictd`, `dict-gcide`, `dict-wikt-en-al`, `moby-thesaurus`. Though yet to figure out how to use thesaurus.
 	* [AskUbuntu thread](https://askubuntu.com/questions/191125/is-there-an-offline-command-line-dictionary) for both.
 * Fonts placed in `~/.local/share/fonts`, FontAwesome for icons.
+* `xdotool` to stimulate key presses

@@ -11,8 +11,9 @@ notifications=$(curl -sf --user-agent "$USERAGENT" "$URL" | jq '.["data"]["child
 
 if [ -n "$notifications" ] && [ "$notifications" -gt 0 ]; then
 	# reddit-alien in reddit's colour
-	echo "%{Fff4500}{F-} $notifications"
+	# open chrome on unread messages and switch to ws1
+	echo "%{A1:google-chrome-stable https\://www.reddit.com/message/unread/ ; xdotool key super+1:}%{F#ff4500} $notifications%{F-}%{A}"
 else
-	#reddit-alien in white
-	echo ""
+	# open reddit and switch to ws1
+	echo "%{A1:google-chrome-stable https\://www.reddit.com/ ; xdotool key super+1:}%{A}"
 fi
