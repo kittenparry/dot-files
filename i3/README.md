@@ -19,7 +19,7 @@
 * `sdcv` as a terminal dictionary.
 	* [GNU/Linux English-English](https://web.archive.org/web/20140428004049/http://abloz.com/huzheng/stardict-dic/misc/stardict-xfardic-gnu-linux-2.4.2.tar.bz2).
 	* [The Collaborative International Dictionary of English](https://web.archive.org/web/20140917131745/http://abloz.com/huzheng/stardict-dic/dict.org/stardict-dictd_www.dict.org_gcide-2.4.2.tar.bz2).
-* or `dictd`, `dict-gcide`, `dict-wikt-en-al`, `moby-thesaurus`. Though yet to figure out how to use thesaurus.
+* or `dictd`, `dict-gcide`, `dict-wikt-en-al`, `moby-thesaurus`. ~~Though yet to figure out how to use thesaurus~~. Thesaurus text is printed when you `dict` something at times, I think.
 	* [AskUbuntu thread](https://askubuntu.com/questions/191125/is-there-an-offline-command-line-dictionary) for both.
 * Fonts placed in `~/.local/share/fonts`, FontAwesome for icons.
 * `xdotool` to stimulate key presses.
