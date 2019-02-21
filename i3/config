@@ -440,7 +440,7 @@ set $mon2 DP-1-1
 # -R probably kills the need for exec but whatevs
 exec wal -R -n -i ~/Pictures/wallpapers/wal.png
 exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
-exec_always xrandr --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
+exec_always xrandr --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94 --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal
 exec_always xrandr --dpi 96
 
 # Custom binds
@@ -484,6 +484,7 @@ assign [class="Pcmanfm"] $ws6
 # assign [class="Sxiv"] $ws6
 assign [class="Steam"] $ws7
 assign [class="Deluge"] $ws8
+assign [class="qBittorrent"] $ws8
 assign [class="Firefox"] $ws8
 assign [class="Spotify"] $ws10
 assign [class="discord"] $ws10
