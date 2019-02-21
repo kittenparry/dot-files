@@ -7,7 +7,6 @@
 * `playerctl` installed for media keys.
 * After installing `polybar`, `install -Dm644 /usr/share/doc/polybar/ config $HOME/.config/polybar/config` & `chmod +x ~/.config/polybar/launch.sh`.
 * `ip addr` to get network interface for network module of `polybar`.
-* `polybar` Spotify display script from [here](https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh).
 * Spotify cache symlink `ln -s /mnt/disk-h/manjaro_storage/spotify /home/edvin/.cache/spotify`.
 
 ### Stuff
