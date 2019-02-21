@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -288,7 +288,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # FIXME: temporarily turned off because it locks on video plays as well
 # exec --no-startup-id xautolock -time 10 -locker blurlock
@@ -437,6 +437,7 @@ bindsym XF86AudioPrev exec playerctl previous
 set $mon1 HDMI-0
 set $mon2 DP-1-1
 
+exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 exec_always xrandr --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94
 exec_always xrandr --dpi 96
 

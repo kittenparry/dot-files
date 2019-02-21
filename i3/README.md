@@ -11,7 +11,7 @@
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
-* `xterm` instead of `urxvt`.
+* ~~`xterm` instead of `urxvt`~~.
 * `mocp` terminal music player.
 * `gnome-screenshot -i` for screenshot taking.
 * `polybar` instead of `i3bar`.
