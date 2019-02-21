@@ -54,6 +54,8 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;3
+font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;3
 
 modules-left = bspwm i3
 modules-center = spotify eth
@@ -277,10 +279,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = "VOL %percentage%% "
+label-volume = "  %percentage%% "
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
