@@ -479,10 +479,10 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-padding = 2
-format-underline = #9000ff00
+format-underline = #1db954
 # spotify
 format-prefix = "  "
-format-prefix-foreground = #9000ff00
+format-prefix-foreground = #1db954
 label = %output:0:150%
 
 #######################
