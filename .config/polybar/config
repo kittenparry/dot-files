@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = spotify eth
-modules-right = filesystem xbacklight pulseaudio memory cpu temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio notification-reddit memory cpu temperature date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
@@ -423,6 +423,7 @@ margin-bottom = 5
 
 ; vim:ft=dosini
 
+# Additional modules
 [module/spotify]
 ; https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
 type = custom/script
@@ -439,3 +440,8 @@ format-prefix-foreground = #0f0
 label = %output:0:150%
 
 #######################
+[module/notification-reddit]
+; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/notification-reddit/notification-reddit.sh
+type = custom/script
+exec = ~/.config/polybar/scripts/notification-reddit.sh
+interval = 60
