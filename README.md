@@ -28,3 +28,5 @@ I can recall them off the top of my head and they are pretty basic anyway but if
   * J/K prev/next chapter
   * //? search forward/backward
   * n/N go to next/prev search
+* `du` to check disk space a folder is taking
+* `df` disk space of all places
