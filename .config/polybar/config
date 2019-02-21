@@ -59,7 +59,7 @@ font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;1
 
 modules-left = bspwm i3
 # not sure if running eth twice is healthy
-modules-center = spotify eth eth2
+modules-center = player-moc spotify eth eth2
 modules-right = filesystem pulseaudio notification-reddit memory cpu temperature system-uptime-pretty date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
@@ -327,6 +327,11 @@ format-volume = <label-volume> <bar-volume>
 label-volume = "  %percentage%% "
 label-volume-foreground = ${root.foreground}
 
+# <ramp-volume>
+;ramp-volume-0 = 🔈
+;ramp-volume-1 = 🔉
+;ramp-volume-2 = 🔊
+
 label-muted =  muted
 label-muted-foreground = #666
 
@@ -503,3 +508,20 @@ exec = ~/.config/polybar/scripts/system-uptime-pretty.sh
 ;format-padding = 2
 format-underline = #f0f
 interval = 60
+
+[module/player-moc]
+; https://github.com/x70b1/polybar-scripts/blob/master/polybar-scripts/player-moc/player-moc.sh
+type = custom/script
+exec = ~/.config/polybar/scripts/player-moc.sh
+interval = 3
+
+format-padding = 2
+format-underline = #fe8b44
+# music
+format-prefix = "  "
+format-prefix-foreground = #888
+
+# next / prev / play-pause
+click-left = mocp -f
+click-right = mocp -r
+click-middle = mocp -G
