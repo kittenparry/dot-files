@@ -54,11 +54,12 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;3
-font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;3
+font-3 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;1
+font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;1
 
 modules-left = bspwm i3
-modules-center = spotify eth
+# not sure if running eth twice is healthy
+modules-center = spotify eth eth2
 modules-right = filesystem pulseaudio notification-reddit memory cpu temperature date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
@@ -138,6 +139,27 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+# chrome
+ws-icon-0 = 1; 
+# code
+ws-icon-1 = 2; 
+# 
+ws-icon-2 = 3;
+# window-maximize
+ws-icon-3 = 4; 
+# opera
+ws-icon-4 = 5; 
+# folder
+ws-icon-5 = 6; 
+# steam
+ws-icon-6 = 7; 
+# download , maybe instead use firefox 
+ws-icon-7 = 8; 
+ws-icon-8 = 9;
+# spotify discord
+ws-icon-9 = 10;  
+
+
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
@@ -146,23 +168,23 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %index% %icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %index% %icon%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index% %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index% %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
@@ -248,16 +270,33 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
+# arrow-down
 format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %downspeed% %upspeed%
+format-connected-prefix = " "
+format-connected-prefix-foreground = #9055aa55
+#${colors.foreground-alt}
+label-connected = %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/eth2]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+# arrow-up
+format-connected-underline = #f50a4d
+format-connected-prefix = " "
+format-connected-prefix-foreground = #90f50a4d
+#${colors.foreground-alt}
+label-connected = %upspeed%
+
+format-disconnected =
+
 
 [module/date]
 type = internal/date
@@ -385,13 +424,14 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
 format-spacing = 1
 
-label-open = 
+# power-off
+label-open = 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = 
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -436,9 +476,10 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-padding = 2
-format-underline = #0f0
+format-underline = #9000ff00
+# spotify
 format-prefix = "  "
-format-prefix-foreground = #0f0
+format-prefix-foreground = #9000ff00
 label = %output:0:150%
 
 #######################
