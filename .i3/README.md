@@ -27,3 +27,4 @@
 * `wal` ~~might be the future~~ creates a colour palette from an image. (`pywal`/`python-pywal`).
 * `gotop-bin`/`gotop`, similar to `htop`, less informative, more visuals.
 * `ncdu` to display disk usage in terminal.
+* `mpv` video player.
