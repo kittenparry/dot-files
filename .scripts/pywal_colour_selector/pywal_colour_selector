@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Select a pywal colour scheme from the given choices
+# Selection is filtered to my personal liking
+# Rest of the colours could certainly be added
+# maybe file path append light/dark for certain range of inputs
+
+# Note this doesn't permanently change the colour scheme
+# You should add wal -f scheme.json to your starting scripts
+# And maybe with the option -R for it to stick
+
+# array of filenames
+colours=(
+	cave
+	classic
+	cupcake
+	default
+	gruvbox-medium
+	gruvbox-soft
+	harmonic
+	heath
+	materialer
+	mexico
+	one
+	plateau
+	solarized
+	sulphurpool
+	tempus_past
+	tomorrow
+)
+# path to .json files
+path=~/.scripts/pywal_colour_selector/lights/
+
+# incremental number
+opt=1
+# display selection with numbers
+for i in "${colours[@]}"
+do
+	echo "$opt: $i"
+	opt=$((opt+1))
+done
+
+# while not between 1 and arr length
+while :
+do
+	# no new line input
+	printf "Select one:"
+	read -r input
+	if [ $input -ge 1 -a $input -le ${#colours[@]} ]
+	then
+		break
+	fi
+	echo "Selection between 1-${#colours[@]}."
+done
+
+wal -f "$path${colours[$input-1]}.json"
+
+# notes
+# ${#colours[@]} arr length
