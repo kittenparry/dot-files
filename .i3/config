@@ -458,7 +458,7 @@ bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
 workspace $ws10 output $mon2
-workspace $ws9 output $mon2
+# workspace $ws9 output $mon2
 # no mouse focus
 focus_follows_mouse no
 
