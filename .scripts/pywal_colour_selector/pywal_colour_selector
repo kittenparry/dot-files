@@ -11,6 +11,7 @@
 
 # array of filenames
 colours=(
+	16-solarized
 	cave
 	classic
 	cupcake
