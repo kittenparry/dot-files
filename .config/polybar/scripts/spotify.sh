@@ -19,7 +19,18 @@ main() {
   album=$(echo "$meta" | sed -nr '/xesam:album"/,+2s/^ +variant +string "(.*)"$/\1/p' | tail -1| sed 's/\&/\\&/g'| sed 's#\/#\\/#g')
   title=$(echo "$meta" | sed -nr '/xesam:title"/,+2s/^ +variant +string "(.*)"$/\1/p' | tail -1 | sed 's/\&/\\&/g'| sed 's#\/#\\/#g')
 
-  echo "${*:-%artist% - %title%}" | sed "s/%artist%/$artist/g;s/%title%/$title/g;s/%album%/$album/g"i | sed "s/\&/\&/g" | sed "s#\/#\/#g"
+  # source for this condition checking idea
+  # https://gist.github.com/wandernauta/6800547#gistcomment-1873759
+  # https://muffinresearch.co.uk/ubuntu-lock-screen-and-pause-spotify/
+  # checks if the title bar is not Spotify, if it outputs nothing to module
+
+  title_bar=$(wmctrl -l | grep -o -e "Spotify.*$")
+  if [[ "$title_bar" != Spotify ]]
+  then
+    echo "${*:-%artist% - %title%}" | sed "s/%artist%/$artist/g;s/%title%/$title/g;s/%album%/$album/g"i | sed "s/\&/\&/g" | sed "s#\/#\/#g"
+  else
+    echo ""; exit
+  fi
 
 }
 
