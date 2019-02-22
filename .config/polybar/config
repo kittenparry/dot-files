@@ -56,6 +56,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;1
 font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;1
+font-5 = Bitstream Vera Sans Mono:pixelsize=10;1
 
 modules-left = bspwm i3
 # not sure if running eth twice is healthy
@@ -279,7 +280,7 @@ format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = #9055aa55
 #${colors.foreground-alt}
-label-connected = %downspeed:08:9%
+label-connected = %{T6}%downspeed:08:9%%{T-}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -298,7 +299,7 @@ format-connected-underline = #f50a4d
 format-connected-prefix = " "
 format-connected-prefix-foreground = #90f50a4d
 #${colors.foreground-alt}
-label-connected = %upspeed:08:9%
+label-connected = %{T6}%upspeed:08:9%%{T-}
 
 format-disconnected =
 
