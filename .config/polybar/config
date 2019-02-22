@@ -236,7 +236,7 @@ interval = 2
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label = %percentage:2%%
+label = %percentage:02:3%%
 
 [module/memory]
 type = internal/memory
@@ -279,7 +279,7 @@ format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = #9055aa55
 #${colors.foreground-alt}
-label-connected = %downspeed%
+label-connected = %downspeed:08:9%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -298,7 +298,7 @@ format-connected-underline = #f50a4d
 format-connected-prefix = " "
 format-connected-prefix-foreground = #90f50a4d
 #${colors.foreground-alt}
-label-connected = %upspeed%
+label-connected = %upspeed:08:9%
 
 format-disconnected =
 
