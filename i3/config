@@ -439,7 +439,7 @@ set $mon2 DP-1-1
 
 # -R probably kills the need for exec but whatevs
 #d9cecef
-exec_always wal -R -f ~/.scripts/pywal_colour_selector/lights/cave.json
+exec wal -R -f ~/.scripts/pywal_colour_selector/lights/16-solarized.json
 exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 exec_always xrandr --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94 --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal
 exec_always xrandr --dpi 96
