@@ -34,3 +34,4 @@
 * `ncdu` to display disk usage in terminal.
 * `mpv` video player.
 * `gnome-disk-utility` for viewing and setting up mounts.
+* `timeshift` (`timeshift-gtk`) to create/restore back ups.
