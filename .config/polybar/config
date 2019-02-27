@@ -106,7 +106,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /mnt/disk-i
+mount-1 = /mnt/disk-e
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
