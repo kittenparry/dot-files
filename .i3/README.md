@@ -30,3 +30,4 @@
 * `gotop-bin`/`gotop`, similar to `htop`, less informative, more visuals.
 * `ncdu` to display disk usage in terminal.
 * `mpv` video player.
+* `gnome-disk-utility` for viewing and setting up mounts.
