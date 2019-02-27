@@ -3,7 +3,7 @@
 * Root of this repository is basically the home directory.
 * Currently not much modified apart from the `polybar` to some extend.
 * Over all still learning ricing, Linux and Arch.
-* Wallpaper source: [thread](http://boards.4chan.org/wg/thread/7353356#p7353627), [direct](http://i.4cdn.org/wg/1548692218015.jpg), [mirror](https://i.imgur.com/slgGXG4.jpg).
+* Wallpaper source: [thread](http://boards.4chan.org/wg/thread/7361798#p7369223), [direct](http://i.4cdn.org/wg/1550947684697.jpg), [mirror](https://i.imgur.com/81KcmOX.jpg).
 
 ![](https://raw.githubusercontent.com/kittenparry/dot-files/master/extras/screenshot.png)
 
