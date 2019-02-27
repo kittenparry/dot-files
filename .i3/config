@@ -473,6 +473,9 @@ exec --no-startup-id dropbox start
 # exec --no-startup-id deluge
 # exec qbittorrent --no-startup-id
 exec_always ~/.scripts/backup_history
+exec_always ~/.scripts/backup_rofi
+# to turn on Force Composition Pipeline on start
+# exec terminal -e 'sudo nvidia-settings'
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
