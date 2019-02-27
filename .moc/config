@@ -205,7 +205,7 @@
 #
 # Example:    Theme = laras_theme
 #
-Theme = hybrid-bright
+Theme = black_theme
 
 # The theme used when running on an xterm.
 #
