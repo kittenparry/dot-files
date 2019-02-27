@@ -150,3 +150,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 (cat ~/.cache/wal/sequences &)
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
+
+# Infitine history size (empty or less than 0 works fine)
+HISTSIZE= 
+HISTFILESIZE=
