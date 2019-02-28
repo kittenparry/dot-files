@@ -461,6 +461,8 @@ workspace $ws10 output $mon2
 # workspace $ws9 output $mon2
 # no mouse focus
 focus_follows_mouse no
+# don't move mouse to the other display on focus change
+mouse_warping none
 
 # start with
 # polybar
