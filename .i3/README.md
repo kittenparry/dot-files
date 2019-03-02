@@ -36,3 +36,4 @@
 * `mpv` video player.
 * `gnome-disk-utility` for viewing and setting up mounts.
 * `timeshift` (`timeshift-gtk`) to create/restore back ups.
+* `alsamixer` for sound configurations.
