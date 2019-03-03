@@ -504,3 +504,4 @@ for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Steam"] resize shrink width 10 px or 10 ppt
 for_window [class="discord"] layout tabbed
 for_window [class="Tk"] floating enable
+for_window [class="com-rarchives-ripme-App"] floating enable
