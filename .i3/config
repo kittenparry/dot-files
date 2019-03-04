@@ -438,12 +438,16 @@ bindsym XF86AudioPrev exec playerctl previous
 set $mon1 HDMI-0
 set $mon2 DP-1-1
 
+# instead of below put the option into the file /etc/X11/xorg.conf.d/optimus.conf
+# exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
 # -R probably kills the need for exec but whatevs
-#d9cecef
+#d9cecef <- what is this?
 exec wal -R -f ~/.scripts/pywal_colour_selector/lights/16-solarized.json
 exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 exec_always xrandr --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94 --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal
-exec_always xrandr --dpi 96
+# this crashes the left monitor after restarts, sometimes the whole thing
+# also isn't necessary anymore after changing tkinter's scaling in log recorder
+# exec_always xrandr --dpi 96
 
 # Custom binds
 bindsym $mod+Shift+x exec --no-startup-id blurlock
@@ -473,7 +477,7 @@ exec spotify --no-startup-id --disable-smooth-scrolling
 exec discord --no-startup-id --disable-smooth-scrolling
 exec ~/.scripts/run_log_recorder
 exec --no-startup-id dropbox start
-# exec --no-startup-id deluge
+exec --no-startup-id deluge
 # exec qbittorrent --no-startup-id
 exec_always ~/.scripts/backup_history
 exec_always ~/.scripts/backup_rofi
@@ -497,6 +501,11 @@ assign [class="JDownloader"] $ws8
 assign [class="Firefox"] $ws8
 assign [class="Spotify"] $ws10
 assign [class="discord"] $ws10
+
+# instructions on assigning terminal programs to workspaces
+# source: https://www.reddit.com/r/i3wm/wiki/faq/assign_emulator
+# urxvt -name irssi_instance -e irssi
+# assign [instance="irssi_instance"] 10
 
 # after launch assigns
 for_window [class="Spotify"] move to workspace $ws10
