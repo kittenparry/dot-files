@@ -14,6 +14,7 @@
 * `git config --global credential.helper cache` && `git config --global credential.helper 'cache --timeout=3600'` (sets expiration of git credentials cache to 1 hour).
 * In `/etc/default/grub`, `GRUB_TIMEOUT` to 0 to remove the start up delay. After change `sudo update-grub`.
 * `git clone https://username@github.com/username/repo_name` to clone a private repo, prompts for password. Also `git config user.name/email "$info"`, just to note.
+* `setxkbmap -layout us,de` && `setxkbmap -option 'grp:alt_shift_toggle'` for additional keyboard layouts. Needs to be placed in i3 config with `exec` for permament effect.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
