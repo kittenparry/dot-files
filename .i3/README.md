@@ -4,6 +4,7 @@
 * First run `systemctl disable tlp` on start by opening a new tty (ALT + F2*) and reboot to get rid of the suspention at start.
 * ~~Install `video-nvidia`, reboot, install `video-vesa`, reboot, remove `video-vesa`, reboot. For whatever reason this, I suppose, was how I got my second monitor to work correctly. Meaning after first installation of `video-nvidia` it didn't appear on `xrandr`, then installing `video-vesa` screwed up everything, then removing it gave me the stuff I wanted.~~
 * [This video](https://www.youtube.com/watch?v=am7xeUFQ8uY) and [these instructions](https://forum.manjaro.org/t/howto-set-up-prime-with-nvidia-proprietary-driver/40225) for driver installation.
+	* Additional to the above adding `Option "metamodes" "nvidia-auto-select +0+0 {ForceCompositionPipeline=On}"` to `/etc/X11/xorg.conf.d/optimus.conf` should auto set it on start (eg. the bullet below).
 * For tearing [this video](https://www.youtube.com/watch?v=_n5oOTvaGUg): In `sudo nvidia-settings` X Server Display Configuration, Advanced, Force Composition Pipeline. Then save to `/etc/X11/mhwd.d/nvidia.conf`. Doesn't seem to hold up on reboot, probably because of the tinkering done in the previous step. Doesn't matter. It activates when you switch it on and I rarely reboot so it's alright.
 * `gpg --generate-key`, `gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv $KEY` before being able to `yaourt -S dropbox`.
 * `playerctl` installed for media keys.
