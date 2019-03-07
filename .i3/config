@@ -478,7 +478,7 @@ exec discord --no-startup-id --disable-smooth-scrolling
 exec ~/.scripts/run_log_recorder
 exec --no-startup-id dropbox start
 exec --no-startup-id deluge
-exec qbittorrent --no-startup-id
+exec --no-startup-id qbittorrent
 exec_always ~/.scripts/backup_history
 exec_always ~/.scripts/backup_rofi
 # to turn on Force Composition Pipeline on start
