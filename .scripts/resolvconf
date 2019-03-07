@@ -9,4 +9,4 @@ nameserver 8.8.4.4
 EOF
 sudo resolvconf -u
 # notify-send by itself didn't work for whatever reason
-i3-msg exec notify-send "DNS set"
+i3-msg exec notify-send "DNS set!"
