@@ -16,6 +16,7 @@
 * In `/etc/default/grub`, `GRUB_TIMEOUT` to 0 to remove the start up delay. After change `sudo update-grub`.
 * `git clone https://username@github.com/username/repo_name` to clone a private repo, prompts for password. Also `git config user.name/email "$info"`, just to note.
 * `setxkbmap -layout us,de` && `setxkbmap -option 'grp:alt_shift_toggle'` for additional keyboard layouts. Needs to be placed in i3 config with `exec` for permament effect.
+* In `deluge`, Preferences > Bandwidth > uncheck Rate limit IP overhead or suffer low low download speeds.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
