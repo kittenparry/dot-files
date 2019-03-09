@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd ~/Dropbox/
-python Log\ Recorder.py
+python Log\ Recorder.pyw
