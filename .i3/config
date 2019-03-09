@@ -490,8 +490,7 @@ assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
 # maybe not ws2
 assign [class="Tor Browser"] $ws2
-# my log recorder program in python tk
-assign [class="Tk"] $ws4
+assign [class="Logrecorder"] $ws4
 assign [class="Opera"] $ws5
 assign [class="Pcmanfm"] $ws6
 # assign [class="XTerm ranger"] $ws6
@@ -514,5 +513,5 @@ for_window [class="Spotify"] move to workspace $ws10
 # so the friends section is smaller than the main window
 for_window [class="Steam"] resize shrink width 10 px or 10 ppt
 for_window [class="discord"] layout tabbed
-for_window [class="Tk"] floating enable
+for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
