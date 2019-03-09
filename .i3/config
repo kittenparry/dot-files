@@ -488,6 +488,8 @@ exec_always ~/.scripts/backup_rofi
 assign [class="Google-chrome"] $ws1
 # assign [class="XTerm"] $ws2
 assign [class="code-oss"] $ws2
+# maybe not ws2
+assign [class="Tor Browser"] $ws2
 # my log recorder program in python tk
 assign [class="Tk"] $ws4
 assign [class="Opera"] $ws5
