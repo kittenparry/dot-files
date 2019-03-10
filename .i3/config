@@ -515,3 +515,4 @@ for_window [class="Steam"] resize shrink width 10 px or 10 ppt
 for_window [class="discord"] layout tabbed
 for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
+for_window [class="Deluge"] layout tabbed
