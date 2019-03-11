@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# not really related to rest of the repo
+# backs up Rimworld mod list so i won't have to hand-select them in the future
+
+cp ~/.config/unity3d/Ludeon\ Studios/RimWorld\ by\ Ludeon\ Studios/ModLists/* ~/Dropbox/RimWorld/ModLists/
