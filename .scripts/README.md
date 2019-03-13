@@ -1,4 +1,6 @@
 In `.profile`:
 ```bash
-export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
+if [ -d "$HOME/.scripts" ]; then
+	export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
+fi
 ```
