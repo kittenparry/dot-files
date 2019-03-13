@@ -1,13 +1,24 @@
 #!/bin/bash
 
 # grep from myLogs.txt
-# grep $argument if there is one
+# if given an argument:
+#   if 1..31 this month's entries on that day
+#     if has one digit append a leading zero
+#   else grep $argument
 # else today's entries
 
-# TODO: also add 1..31 for this month's other days?
+# TODO: 1..31 might be turned into -d 1..31 option so it doesn't block normal searches of 1..31
 
 if [[ $1 ]]; then
-	arg=$1
+	in=$1
+	if [[ $in -gt 0 && $in -lt 32 ]]; then
+		if [[ ${#in} == 1 ]]; then
+			in="0$in"
+		fi
+		arg=`date +%Y.%m.`$in
+	else
+		arg=$in
+	fi
 else
 	arg=`date +%Y.%m.%d`
 fi
