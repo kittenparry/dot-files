@@ -482,6 +482,8 @@ exec --no-startup-id qbittorrent
 exec_always ~/.scripts/backup_all
 # to turn on Force Composition Pipeline on start
 # exec terminal -e 'sudo nvidia-settings'
+# turn on num lock on start
+exec xdotool key Num_Lock
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
