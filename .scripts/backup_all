@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# all backing up scripts combined into one
+# -e enables translation of \t
+
+pre='done \t'
+
+# .bash_history
+cp ~/.bash_history ~/Dropbox/Manjaro/
+echo -e "$pre .bash_history"
+
+# Rimworld modlists
+cp ~/.config/unity3d/Ludeon\ Studios/RimWorld\ by\ Ludeon\ Studios/ModLists/* ~/Dropbox/RimWorld/ModLists/
+echo -e "$pre rimworld modlists"
+
+# ripme history and config
+cp ~/.config/ripme/* ~/Dropbox/Manjaro/ripme/
+echo -e "$pre ripme history/config"
+
+# rofi cache and history
+cp ~/.cache/rofi-3.runcache ~/Dropbox/Manjaro/
+echo -e "$pre rofi cache/history"

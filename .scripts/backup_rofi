@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# boot script to copy .rofi-3.runcache to Dropbox
-
-cp ~/.cache/rofi-3.runcache ~/Dropbox/Manjaro/
