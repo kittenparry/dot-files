@@ -41,3 +41,12 @@
 * `timeshift` (`timeshift-gtk`) to create/restore back ups.
 * `alsamixer` for sound configurations.
 * `lxappearance` and `qt5ct` for configuring the appearance of the other programs.
+* `figlet` for creating letters like these:
+```
+ __  __              _                 
+|  \/  | __ _ _ __  (_) __ _ _ __ ___  
+| |\/| |/ _` | '_ \ | |/ _` | '__/ _ \ 
+| |  | | (_| | | | || | (_| | | | (_) |
+|_|  |_|\__,_|_| |_|/ |\__,_|_|  \___/ 
+                  |__/                 
+```
