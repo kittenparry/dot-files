@@ -50,3 +50,4 @@
 |_|  |_|\__,_|_| |_|/ |\__,_|_|  \___/ 
                   |__/                 
 ```
+* `progress` to get progress on, say, `mv`, `cp` etc. `watch progress -w` to watch progress <-- was really necessary.
