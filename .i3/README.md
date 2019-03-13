@@ -40,3 +40,4 @@
 * `gnome-disk-utility` for viewing and setting up mounts.
 * `timeshift` (`timeshift-gtk`) to create/restore back ups.
 * `alsamixer` for sound configurations.
+* `lxappearance` and `qt5ct` for configuring the appearance of the other programs.
