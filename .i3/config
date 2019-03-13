@@ -468,6 +468,8 @@ workspace $ws10 output $mon2
 focus_follows_mouse no
 # don't move mouse to the other display on focus change
 mouse_warping none
+# "fixes" the strange behaviour i get when switching workspaces and mouse is on the second display
+force_focus_wrapping yes
 
 # start with
 # polybar
