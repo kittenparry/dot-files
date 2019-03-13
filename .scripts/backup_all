@@ -9,14 +9,14 @@ pre='done \t'
 cp ~/.bash_history ~/Dropbox/Manjaro/
 echo -e "$pre .bash_history"
 
+# rofi cache and history
+cp ~/.cache/rofi-3.runcache ~/Dropbox/Manjaro/
+echo -e "$pre rofi cache/history"
+
 # Rimworld modlists
 cp ~/.config/unity3d/Ludeon\ Studios/RimWorld\ by\ Ludeon\ Studios/ModLists/* ~/Dropbox/RimWorld/ModLists/
 echo -e "$pre rimworld modlists"
 
 # ripme history and config
 cp ~/.config/ripme/* ~/Dropbox/Manjaro/ripme/
-echo -e "$pre ripme history/config"
-
-# rofi cache and history
-cp ~/.cache/rofi-3.runcache ~/Dropbox/Manjaro/
-echo -e "$pre rofi cache/history"
+echo -e "$pre ripme config/history"
