@@ -1,1 +1,4 @@
-Having a `bin/` folder instead of `.scripts/` apparently appends it to path automatically (probably the main reason for having it in the first place, before the rename). Probably could be edited to include .scripts as well. It's in `.bashrc` or `.profile`, don't quite remember.
+In `.profile`:
+```bash
+export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
+```
