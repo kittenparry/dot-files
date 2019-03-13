@@ -1,21 +1,30 @@
 #!/bin/bash
 
 # grep from myLogs.txt
+# explanation of the if-else statements in the code:
+#
 # if given an argument:
-#   if 1..31 this month's entries on that day
-#     if has one digit append a leading zero
-#   else grep $argument
-# else today's entries
-
-# TODO: 1..31 might be turned into -d 1..31 option so it doesn't block normal searches of 1..31
+#   if it is '-zz':
+#     if given a second argument between 1..31:
+#       if it has one digit append a leading zero
+#       grep month's entries of that day
+#     else print error and exit
+#   else grep entries with the argument
+# else grep today's entries
 
 if [[ $1 ]]; then
 	in=$1
-	if [[ $in -gt 0 && $in -lt 32 ]]; then
-		if [[ ${#in} == 1 ]]; then
-			in="0$in"
+	if [[ $in == '-zz' ]]; then
+		if [[ $2 && $2 -gt 0 && $2 -lt 32 ]]; then
+			day=$2
+			if [[ ${#day} == 1 ]]; then
+				day="0$day"
+			fi
+			arg=`date +%Y.%m.`$day
+		else
+			echo 'Usage: catl -zz 1..31'
+			exit 1
 		fi
-		arg=`date +%Y.%m.`$in
 	else
 		arg=$in
 	fi
