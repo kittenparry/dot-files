@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# grep from myLogs.txt
+# grep $argument if there is one
+# else today's entries
+
+# TODO: also add 1..31 for this month's other days?
+
+if [[ $1 ]]; then
+	arg=$1
+else
+	arg=`date +%Y.%m.%d`
+fi
+
+cat ~/Dropbox/Other/myLogs.txt | grep --color "$arg"
