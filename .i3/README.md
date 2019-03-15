@@ -53,3 +53,4 @@
                   |__/                 
 ```
 * `progress` to get progress on, say, `mv`, `cp` etc. `watch progress -w` to watch progress <-- was really necessary.
+* `sxiv-rifle` to browse through multiple images after opening one.
