@@ -15,17 +15,17 @@ x-scheme-handler/mailto=userapp-Thunderbird.desktop
 message/rfc822=userapp-Thunderbird.desktop
 application/pdf=epdfview.desktop
 application/x-bittorrent=deluge.desktop
-############################################## video ######
-video/x-matroska=mpv.desktop;vlc.desktop;            # mkv
-video/mp4=mpv.desktop;vlc.desktop;                   # mp4, m4v, 3gp
-video/x-flv=mpv.desktop;vlc.desktop;                 # flv
-video/x-ms-asf=mpv.desktop;vlc.desktop;              # wmv
-video/x-msvideo=mpv.desktop;vlc.desktop;             # avi
-video/webm=mpv.desktop;vlc.desktop;                  # webm
-video/quicktime=mpv.desktop;vlc.desktop;             # mov
-application/octet-stream=mpv.desktop;vlc.desktop;    # ts
-video/mpeg=mpv.desktop;vlc.desktop;                  # mpg
-############################################## pics #######
+############################################## video #################
+video/x-matroska=mpv.desktop;vlc.desktop;                            # mkv
+video/mp4=mpv.desktop;vlc.desktop;                                   # mp4, m4v, 3gp
+video/x-flv=mpv.desktop;vlc.desktop;                                 # flv
+video/x-ms-asf=mpv.desktop;vlc.desktop;                              # wmv
+video/x-msvideo=mpv.desktop;vlc.desktop;                             # avi
+video/webm=mpv.desktop;vlc.desktop;                                  # webm
+video/quicktime=mpv.desktop;vlc.desktop;                             # mov
+application/octet-stream=mpv.desktop;vlc.desktop;                    # ts
+video/mpeg=mpv.desktop;vlc.desktop;                                  # mpg
+############################################## pics ##################
 image/jpeg=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop;     # jpg, jpeg
 image/png=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop;      # png
 image/x-ms-bmp=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop; # bmp
