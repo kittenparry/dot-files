@@ -519,3 +519,5 @@ for_window [class="discord"] layout tabbed
 for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
 for_window [class="Deluge"] layout tabbed
+# dwarf fortress lazy newb pack window
+for_window [class="Tk"] floating enable
