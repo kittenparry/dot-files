@@ -18,6 +18,7 @@
 * `setxkbmap -layout us,de` && `setxkbmap -option 'grp:alt_shift_toggle'` for additional keyboard layouts. Needs to be placed in i3 config with `exec` for permament effect.
 * In `deluge`, Preferences > Bandwidth > uncheck Rate limit IP overhead or suffer low low download speeds.
 * Detach process from terminal by running it in the background by appending `&` at the end, then `jobs` to get its number and `disown %number` usually `%1`. First step may be lengthened by running the command, ctrl-z to stop it, `bg` to continue running it in the background.
+* `file -i $file` to get file's mime type. `grep "$package" -l -r /usr/share/applications` to find its `.desktop` version (or here `~/.local/share/applications`). Manually change in `mimeapps.list` or `xdg-mime default transmission-gtk.desktop x-scheme-handler/magnet` (example assignment). To check current set program `xdg-mime query default x-scheme-handler/magnet` (ex). [Source](https://askubuntu.com/questions/62585/how-do-i-set-a-new-xdg-open-setting).
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
