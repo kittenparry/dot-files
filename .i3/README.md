@@ -17,6 +17,7 @@
 * `git clone https://username@github.com/username/repo_name` to clone a private repo, prompts for password. Also `git config user.name/email "$info"`, just to note.
 * `setxkbmap -layout us,de` && `setxkbmap -option 'grp:alt_shift_toggle'` for additional keyboard layouts. Needs to be placed in i3 config with `exec` for permament effect.
 * In `deluge`, Preferences > Bandwidth > uncheck Rate limit IP overhead or suffer low low download speeds.
+* Detach process from terminal by running it in the background by appending `&` at the end, then `jobs` to get its number and `disown %number` usually `%1`. First step may be lengthened by running the command, ctrl-z to stop it, `bg` to continue running it in the background.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
