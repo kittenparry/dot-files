@@ -598,7 +598,7 @@ assign [class=$g_csgo] $ws19
 assign [class=$g_dota] $ws19
 assign [class=$g_rimworld] $ws19
 
-for_window [class=$g_ck2] fullscreen enable
+# for_window [class=$g_ck2] fullscreen enable
 for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
