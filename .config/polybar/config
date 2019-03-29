@@ -213,8 +213,8 @@ ws-icon-5 = 6; 
 ws-icon-6 = 7; 
 # FA-icon: download , maybe instead use firefox 
 ws-icon-7 = 8; 
-# FA-icon: gamepad
-ws-icon-8 = 9; 
+#
+ws-icon-8 = 9;
 #
 ws-icon-9 = 10;
 # 
@@ -233,8 +233,8 @@ ws-icon-15 = 16;
 ws-icon-16 = 17;
 # 
 ws-icon-17 = 18;
-# 
-ws-icon-18 = 19;
+# FA-icon: gamepad 
+ws-icon-18 = 19; 
 # FA-icon: spotify discord
 ws-icon-19 = 20;  
 # FA-icon: user

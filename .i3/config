@@ -189,9 +189,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
-######################
-# numpad additional 10
-######################
+########################
+# numpad additional 10 #
+########################
 
 set $ws11 "11"
 set $ws12 "12"
@@ -242,9 +242,9 @@ bindsym $mod+Shift+Mod2+KP_Up move container to workspace $ws18; workspace $ws18
 bindsym $mod+Shift+Mod2+KP_Prior move container to workspace $ws19; workspace $ws19
 bindsym $mod+Shift+Mod2+KP_Insert move container to workspace $ws20; workspace $ws20
 
-######################
-######################
-######################
+########################
+########################
+########################
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -576,3 +576,31 @@ for_window [class="discord"] layout tabbed
 for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
 for_window [class="Deluge"] layout tabbed
+
+########################
+######### games ########
+########################
+
+# assign games to ws19 and enable fullscreen on launch so polybar tray doesn't show up
+
+# ck2 might be somewhat undesired due to launcher spawning in ws19 instead of ws7 where steam is
+# also tries to fullscreen ck2 launcher
+
+set $g_dota "dota2"
+set $g_csgo "csgo_linux64"
+set $g_rimworld "RimWorldLinux.x86_64"
+set $g_ck2 "ck2"
+
+assign [class=$g_dota] $ws19
+assign [class=$g_csgo] $ws19
+assign [class=$g_rimworld] $ws19
+assign [class=$g_ck2] $ws19
+
+for_window [class=$g_dota] fullscreen enable
+for_window [class=$g_csgo] fullscreen enable
+for_window [class=$g_rimworld] fullscreen enable
+for_window [class=$g_ck2] fullscreen enable
+
+########################
+########################
+########################
