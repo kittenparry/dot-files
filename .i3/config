@@ -519,7 +519,7 @@ bindsym Ctrl+Print exec gnome-screenshot -i
 bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
-workspace $ws10 output $mon2
+workspace $ws20 output $mon2
 # workspace $ws9 output $mon2
 # no mouse focus
 focus_follows_mouse no
@@ -560,8 +560,8 @@ assign [class="Deluge"] $ws8
 assign [class="qBittorrent"] $ws8
 assign [class="JDownloader"] $ws8
 assign [class="Firefox"] $ws8
-assign [class="Spotify"] $ws10
-assign [class="discord"] $ws10
+assign [class="Spotify"] $ws20
+assign [class="discord"] $ws20
 
 # instructions on assigning terminal programs to workspaces
 # source: https://www.reddit.com/r/i3wm/wiki/faq/assign_emulator
@@ -569,7 +569,7 @@ assign [class="discord"] $ws10
 # assign [instance="irssi_instance"] 10
 
 # after launch assigns
-for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Spotify"] move to workspace $ws20
 # so the friends section is smaller than the main window
 for_window [class="Steam"] resize shrink width 10 px or 10 ppt
 for_window [class="discord"] layout tabbed
