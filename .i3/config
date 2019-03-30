@@ -603,6 +603,8 @@ for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
 
+for_window [class=$g_ck2] focus
+
 ########################
 ########################
 ########################
