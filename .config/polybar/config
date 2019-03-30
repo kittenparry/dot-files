@@ -81,6 +81,9 @@ scroll-down = i3wm-wsprev
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+# ipc channel to show/hide the bar
+enable-ipc = true
+
 [bar/secondary]
 monitor = ${env:MONITOR}
 width = 100%

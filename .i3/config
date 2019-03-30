@@ -483,7 +483,11 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# CUSTOM BELOW
+########################
+########################
+##### CUSTOM BELOW #####
+########################
+########################
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -508,6 +512,7 @@ exec_always xrandr --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate 
 
 # Custom binds
 bindsym $mod+Shift+x exec --no-startup-id blurlock
+bindsym $mod+Shift+z exec polybar-msg cmd toggle
 bindsym $mod+d exec rofi --no-startup-id`` -show run
 # grave is `
 bindsym $mod+grave workspace back_and_forth
