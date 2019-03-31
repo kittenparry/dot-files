@@ -627,22 +627,13 @@ for_window [class=$g_stellaris] focus
 set $t_ws4_1 "ws4_gotop_term"
 set $t_ws4_2 "ws4_empty_term"
 
-# removed -e gotop from the first entry because of the colours messing up for urxvt -e ..
-# see issue #2 at https://github.com/kittenparry/dot-files/issues/2
-# above is fixed
 exec urxvt -name $t_ws4_1 -e gotop
 exec urxvt -name $t_ws4_2
 
 assign [instance=$t_ws4_1] $ws4
 assign [instance=$t_ws4_2] $ws4
 
-# 150px move left 575px, move up 328px
-# 24,31 (used 30 to match the log recorder)
-# 724x514
 for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
-# move right 170px, move up 178px
-# 769,181 (used 765 and 180 instead)
-# 724x364
 for_window [instance=$t_ws4_2] floating enable move position 765 180
 
 # instructions on getting the window information
