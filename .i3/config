@@ -527,6 +527,8 @@ bindsym $mod+F4 exec pamac-manager
 workspace $ws20 output $mon2
 # make sure ws19 never spawns on second monitor
 workspace $ws19 output $mon1
+# the above also boots into ws19 so i'm adding below
+workspace $ws1 output $mon1
 # workspace $ws9 output $mon2
 # no mouse focus
 focus_follows_mouse no
