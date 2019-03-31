@@ -503,9 +503,10 @@ set $mon2 DP-1-1
 # exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
 # -R probably kills the need for exec but whatevs
 #d9cecef <- what is this?
-exec wal -R -f ~/.scripts/pywal_colour_selector/lights/16-solarized.json
-exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
+# shouldn't need wal anymore after changing .Xresources, but needs testing
+# exec wal -R -f ~/.scripts/pywal_colour_selector/lights/16-solarized.json
 exec_always xrandr --output $mon1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 59.94 --output $mon2 --mode 1280x1024 --pos 1920x56 --rotate normal
+exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 # this crashes the left monitor after restarts, sometimes the whole thing
 # also isn't necessary anymore after changing tkinter's scaling in log recorder
 # exec_always xrandr --dpi 96
@@ -628,14 +629,29 @@ set $t_ws4_2 "ws4_empty_term"
 
 # removed -e gotop from the first entry because of the colours messing up for urxvt -e ..
 # see issue #2 at https://github.com/kittenparry/dot-files/issues/2
-exec urxvt -name $t_ws4_1
+# above is fixed
+exec urxvt -name $t_ws4_1 -e gotop
 exec urxvt -name $t_ws4_2
 
 assign [instance=$t_ws4_1] $ws4
 assign [instance=$t_ws4_2] $ws4
 
-for_window [instance=$t_ws4_1] floating enable move left 575px, move up 328px resize grow down 150px
-for_window [instance=$t_ws4_2] floating enable move right 170px, move up 178px
+# 150px move left 575px, move up 328px
+# 24,31 (used 30 to match the log recorder)
+# 724x514
+for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
+# move right 170px, move up 178px
+# 769,181 (used 765 and 180 instead)
+# 724x364
+for_window [instance=$t_ws4_2] floating enable move position 765 180
+
+# instructions on getting the window information
+# sleep 3s && xdotool getactivewindow
+# to get window id
+# xdotool getwindowgeometry id
+# or
+# xdotool getwindowgeometry -shell id
+# to get geometry info
 
 ########################
 ########################
