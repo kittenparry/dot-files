@@ -600,6 +600,7 @@ set $g_ck2 "ck2"
 set $g_csgo "csgo_linux64"
 set $g_dota "dota2"
 set $g_rimworld "RimWorldLinux.x86_64"
+set $g_soft_inc "Software Inc.x86_64"
 set $g_stellaris "stellaris"
 
 # can we use a for loop for these assignments?
@@ -608,12 +609,14 @@ assign [class=$g_ck2] $ws19
 assign [class=$g_csgo] $ws19
 assign [class=$g_dota] $ws19
 assign [class=$g_rimworld] $ws19
+assign [class=$g_soft_inc] $ws19
 assign [class=$g_stellaris] $ws19
 
 # for_window [class=$g_ck2] fullscreen enable
 for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
+for_window [class=$g_soft_inc] fullscreen enable
 
 for_window [class=$g_ck2] focus
 for_window [class=$g_stellaris] focus
