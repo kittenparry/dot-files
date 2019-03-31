@@ -14,8 +14,8 @@ XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-*background:                      #222D31
-*foreground:                      #d8d8d8
+*background:                      #fdf6e3
+*foreground:                      #586e75
 *fading:                          8
 *fadeColor:                       black
 *cursorColor:                     #1ABB9B
@@ -23,36 +23,36 @@ XTerm*selectToClipboard: true
 *pointerColorForeground:          #16A085
 
 !! black dark/light
-*color0:                          #222D31
-*color8:                          #585858
+*color0:                          #fdf6e3
+*color8:                          #839496
 
 !! red dark/light
-*color1:                          #ab4642
-*color9:                          #ab4642
+*color1:                          #dc322f
+*color9:                          #dc322f
 
 !! green dark/light
-*color2:                          #7E807E
-*color10:                         #8D8F8D
+*color2:                          #859900
+*color10:                         #859900
 
 !! yellow dark/light
-*color3:                          #f7ca88
-*color11:                         #f7ca88
+*color3:                          #b58900
+*color11:                         #b58900
 
 !! blue dark/light
-*color4:                          #7cafc2
-*color12:                         #7cafc2
+*color4:                          #268bd2
+*color12:                         #268bd2
 
 !! magenta dark/light
-*color5:                          #ba8baf
-*color13:                         #ba8baf
+*color5:                          #6c71c4
+*color13:                         #6c71c4
 
 !! cyan dark/light
-*color6:                          #1ABB9B
-*color14:                         #1ABB9B
+*color6:                          #2aa198
+*color14:                         #2aa198
 
 !! white dark/light
-*color7:                          #d8d8d8
-*color15:                         #f8f8f8
+*color7:                          #586e75
+*color15:                         #002b36
 
 Xcursor.theme: xcursor-breeze-snow
 Xcursor.size:                     0
@@ -65,7 +65,7 @@ URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [100]#222D31
+URxvt.background:                 [100]#fdf6e3
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
