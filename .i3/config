@@ -618,5 +618,25 @@ for_window [class=$g_ck2] focus
 for_window [class=$g_stellaris] focus
 
 ########################
+### additional terms ###
+########################
+
+# ws4 gotop and an empty terminal for catl and dict
+
+set $t_ws4_1 "ws4_gotop_term"
+set $t_ws4_2 "ws4_empty_term"
+
+# removed -e gotop from the first entry because of the colours messing up for urxvt -e ..
+# see issue #2 at https://github.com/kittenparry/dot-files/issues/2
+exec urxvt -name $t_ws4_1
+exec urxvt -name $t_ws4_2
+
+assign [instance=$t_ws4_1] $ws4
+assign [instance=$t_ws4_2] $ws4
+
+for_window [instance=$t_ws4_1] floating enable move left 575px, move up 328px resize grow down 150px
+for_window [instance=$t_ws4_2] floating enable move right 170px, move up 178px
+
+########################
 ########################
 ########################
