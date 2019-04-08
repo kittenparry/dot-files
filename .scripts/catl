@@ -4,25 +4,67 @@
 # explanation of the if-else statements in the code:
 #
 # if given an argument:
-#   if it is '-zz':
+#   if it is '-d':
 #     if given a second argument between 1..31:
 #       if it has one digit append a leading zero
 #       grep month's entries of that day
-#     else print error and exit
+#     else if given second argument is 0 grep '-d'
+#     else print usage and exit
+#   else if it is '-l': (L)
+#     if given a second argument as an integer:
+#       grep the last n entries
+#     else if given second argument is 0 grep '-l'
+#     else print usage and exit
+#   else if it is '-h' or '--help':
+#     if given a second argument as 0:
+#       grep '-h' or '--help'
+#     else print help message and exit
 #   else grep entries with the argument
 # else grep today's entries
 
+path=~/Dropbox/Other/myLogs.txt
+help_d=$'Usage: catl -d 1..31\nfor "-d" search: catl -d 0'
+help_l=$'Usage: catl -l 1..n\nfor "-l" search: catl -l 0'
+help_h=$'Usage: catl [OPTIONS]
+
+Options:
+  -d INT[1..31]\tGrep entries with given day of the month.
+	\t0 for grep "-d"
+  -l INT[1..n]\tGrep the last INT entries.
+	\t0 for grep "-l"
+  -h, --help\tShow this message and exit.
+	\t0 for grep "-h" or "--help"'
+
 if [[ $1 ]]; then
 	in=$1
-	if [[ $in == '-zz' ]]; then
+	if [[ $in == '-d' ]]; then
 		if [[ $2 && $2 -gt 0 && $2 -lt 32 ]]; then
 			day=$2
 			if [[ ${#day} == 1 ]]; then
 				day="0$day"
 			fi
 			arg=`date +%Y.%m.`$day
+		elif [[ $2 && $2 -eq 0 ]]; then
+			arg=$in
 		else
-			echo 'Usage: catl -zz 1..31'
+			echo "$help_d"
+			exit 1
+		fi
+	elif [[ $in == '-l' ]]; then
+		if [[ $2 && $2 -gt 0 ]]; then
+			cat $path | tail -$2
+			exit 1
+		elif [[ $2 && $2 -eq 0 ]]; then
+			arg=$in
+		else
+			echo "$help_l"
+			exit 1
+		fi
+	elif [[ $in == '-h' || $in == '--help' ]]; then
+		if [[ $2 && $2 -eq 0 ]]; then
+			arg=$in
+		else
+			echo "$help_h"
 			exit 1
 		fi
 	else
@@ -32,4 +74,4 @@ else
 	arg=`date +%Y.%m.%d`
 fi
 
-cat ~/Dropbox/Other/myLogs.txt | grep --color "$arg"
+cat $path | grep --color -e "$arg"
