@@ -596,6 +596,7 @@ for_window [class="Deluge"] layout tabbed
 # ck2 might be somewhat undesired due to launcher spawning in ws19 instead of ws7 where steam is
 # also tries to fullscreen ck2 launcher
 
+set $g_borderlands "Borderlands2"
 set $g_ck2 "ck2"
 set $g_csgo "csgo_linux64"
 set $g_dota "dota2"
@@ -605,6 +606,7 @@ set $g_stellaris "stellaris"
 
 # can we use a for loop for these assignments?
 
+assign [class=$g_borderlands] $ws19
 assign [class=$g_ck2] $ws19
 assign [class=$g_csgo] $ws19
 assign [class=$g_dota] $ws19
@@ -612,6 +614,7 @@ assign [class=$g_rimworld] $ws19
 assign [class=$g_soft_inc] $ws19
 assign [class=$g_stellaris] $ws19
 
+for_window [class=$g_borderlands] fullscreen enable
 # for_window [class=$g_ck2] fullscreen enable
 for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
