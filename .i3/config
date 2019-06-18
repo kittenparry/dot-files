@@ -596,6 +596,8 @@ for_window [class="Deluge"] layout tabbed
 # ck2 might be somewhat undesired due to launcher spawning in ws19 instead of ws7 where steam is
 # also tries to fullscreen ck2 launcher
 
+# Wine for all wine games and apps?
+
 set $g_borderlands "Borderlands2"
 set $g_ck2 "ck2"
 set $g_csgo "csgo_linux64"
@@ -604,6 +606,8 @@ set $g_eu4 "eu4"
 set $g_rimworld "RimWorldLinux.x86_64"
 set $g_soft_inc "Software Inc.x86_64"
 set $g_stellaris "stellaris"
+set $g_wine "Wine"
+
 
 # can we use a for loop for these assignments?
 
@@ -615,6 +619,7 @@ assign [class=$g_eu4] $ws19
 assign [class=$g_rimworld] $ws19
 assign [class=$g_soft_inc] $ws19
 assign [class=$g_stellaris] $ws19
+assign [class=$g_wine] $ws19
 
 for_window [class=$g_borderlands] fullscreen enable
 # for_window [class=$g_ck2] fullscreen enable
