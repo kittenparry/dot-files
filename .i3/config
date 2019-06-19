@@ -606,6 +606,8 @@ set $g_eu4 "eu4"
 set $g_rimworld "RimWorldLinux.x86_64"
 set $g_soft_inc "Software Inc.x86_64"
 set $g_stellaris "stellaris"
+# dota underlords
+set $g_underlords "underlords"
 set $g_wine "Wine"
 
 
@@ -619,6 +621,7 @@ assign [class=$g_eu4] $ws19
 assign [class=$g_rimworld] $ws19
 assign [class=$g_soft_inc] $ws19
 assign [class=$g_stellaris] $ws19
+assign [class=$g_underlords] $ws19
 assign [class=$g_wine] $ws19
 
 for_window [class=$g_borderlands] fullscreen enable
@@ -627,6 +630,7 @@ for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
 for_window [class=$g_soft_inc] fullscreen enable
+for_window [class=$g_underlords] fullscreen enable
 
 for_window [class=$g_ck2] focus
 for_window [class=$g_eu4] focus
