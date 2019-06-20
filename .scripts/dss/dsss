@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# this instead of an alias so rofi could run it
+
+dss s

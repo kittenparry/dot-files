@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# launch different programs with smooth scrolling disabled
+
+if [[ $1 ]]; then
+	if [[ $1 == 'd' ]]; then
+		discord --disable-smooth-scrolling
+	elif [[ $1 == 's' ]]; then
+		spotify --disable-smooth-scrolling
+	fi
+else
+	echo -e "dss\td discord\n\ts spotify"
+fi
