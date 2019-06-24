@@ -58,3 +58,4 @@
 ```
 * `progress` to get progress on, say, `mv`, `cp` etc. `watch progress -w` to watch progress <-- was really necessary.
 * `sxiv-rifle` to browse through multiple images after opening one.
+* `ex` to extract compressed files instead of `unzip`, `unrar x`, `7z x` and what not. Apparently [this](https://github.com/kittenparry/dot-files/blob/29f19cb94c951a547bafe4ba6c4bb4964cc869b7/.bashrc#L119) has been sitting here since the beginning.
