@@ -24,8 +24,8 @@ main() {
 	# https://muffinresearch.co.uk/ubuntu-lock-screen-and-pause-spotify/
 	# checks if the title bar is not Spotify, if it outputs nothing to module
 
-	title_bar=$(wmctrl -l | grep -o -e "Spotify$")
-	if [[ "$title_bar" != Spotify ]]
+	title_bar=$(wmctrl -l | grep -o -e "Spotify Premium$")
+	if [[ "$title_bar" != "Spotify Premium" ]]
 	then
 		echo "${*:-%artist% - %title%}" | sed "s/%artist%/$artist/g;s/%title%/$title/g;s/%album%/$album/g"i | sed "s/\&/\&/g" | sed "s#\/#\/#g"
 	else
