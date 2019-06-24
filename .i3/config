@@ -570,6 +570,7 @@ assign [class="Deluge"] $ws8
 assign [class="qBittorrent"] $ws8
 assign [class="JDownloader"] $ws8
 assign [class="Firefox"] $ws8
+assign [class="Lutris"] $ws19
 assign [class="Spotify"] $ws20
 assign [class="discord"] $ws20
 

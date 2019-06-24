@@ -234,8 +234,8 @@ ws-icon-14 = 15;
 ws-icon-15 = 16;
 # 
 ws-icon-16 = 17;
-# 
-ws-icon-17 = 18;
+# FA-icon: save
+ws-icon-17 = 18; 
 # FA-icon: gamepad 
 ws-icon-18 = 19; 
 # FA-icon: spotify discord

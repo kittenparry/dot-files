@@ -22,6 +22,7 @@
 * `sudo ln -s /etc/ssl /usr/lib/ssl` to fix the connection issue of Borderlands 2.
 * `sudo chown -R $USER:$USER /mnt/disk-ga` to fix the permission issue I've been having with the new partition.
 	* To view permissions `ls -ld /data` for a directory, and `ls -l /data` for files.
+* League of Legends symlink so that Lutris doesn't just install it in home directory and partition `ln -s /mnt/disk-ga/lutris/league-of-legends ~/.wine-appimage-lol`
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
