@@ -21,6 +21,7 @@
 * `file -i $file` to get file's mime type. `grep "$package" -l -r /usr/share/applications` to find its `.desktop` version (or here `~/.local/share/applications`). Manually change in `mimeapps.list` or `xdg-mime default transmission-gtk.desktop x-scheme-handler/magnet` (example assignment). To check current set program `xdg-mime query default x-scheme-handler/magnet` (ex). [Source](https://askubuntu.com/questions/62585/how-do-i-set-a-new-xdg-open-setting).
 * `sudo ln -s /etc/ssl /usr/lib/ssl` to fix the connection issue of Borderlands 2.
 * `sudo chown -R $USER:$USER /mnt/disk-ga` to fix the permission issue I've been having with the new partition.
+	* To view permissions `ls -ld /data` for a directory, and `ls -l /data` for files.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
