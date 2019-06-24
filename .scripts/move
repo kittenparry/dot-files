@@ -10,13 +10,20 @@ folders=(f.torrent f.img f.webm f.exe f.comp f.vid f.oth)
 # extension arrays
 ex_tor=(torrent)
 ex_img=(jpg png gif jpeg bmp webp
-JPG PNG)
+	JPG PNG)
 ex_web=(webm)
 ex_ex=(exe msi) # probably unnecessary
 ex_com=(rar zip 7z dmg tar.xz)
 ex_vid=(mp4 avi flv ts mov wmv mkv 3gp m4v mpg
-MOV MP4)
-ex_oth=(pdf mp3 txt iso docx rtf svg js pptx doc m4a html css ogg xlsx gz azw3 mobi log jar scs swf ods db xml ini sh php ogx save htmlz h class rpa rpy sav package ttf bk2 csv renpy srt apk sdltm dll py pak vsix icns circ pls bat c)
+	MOV MP4)
+ex_oth=(
+	pdf mp3 txt iso docx rtf svg js pptx doc
+	m4a html css ogg xlsx gz azw3 mobi log jar
+	scs swf ods db xml ini sh php ogx save
+	htmlz h class rpa rpy sav package ttf bk2 csv
+	renpy srt apk sdltm dll py pak vsix icns circ
+	pls bat c
+)
 
 # create subfolders if they don't exist
 for f in "${folders[@]}"
