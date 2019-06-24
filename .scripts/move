@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# move files in ~/Downloads into separate directories based on file extensions
+# direct port of batch version below
+# https://github.com/kittenparry/small-scripts/blob/master/bat/move.bat
+
+dwn=~/Downloads
+folders=(f.torrent f.img f.webm f.exe f.comp f.vid f.oth)
+
+# extension arrays
+ex_tor=(torrent)
+ex_img=(jpg png gif jpeg bmp webp)
+ex_web=(webm)
+ex_ex=(exe msi) # probably unnecessary
+ex_com=(rar zip 7z dmg)
+ex_vid=(mp4 avi flv ts mov wmv mkv 3gp m4v mpg)
+ex_oth=(pdf mp3 txt iso docx rtf svg js pptx doc m4a html css ogg xlsx gz azw3 mobi log jar scs swf ods db xml ini sh php ogx save htmlz h class rpa rpy sav package ttf bk2 csv renpy srt apk sdltm dll py pak)
+
+# create subfolders if they don't exist
+for f in "${folders[@]}"
+do
+	if [ ! -d $dwn/$f ]; then
+		mkdir $dwn/$f
+		echo -e "$dwn/$f\tcreated"
+	else
+		echo -e "$dwn/$f\talready exists"
+	fi
+done
+
+cd ~/Downloads
+
+# testing a better method than below here
+for file in $dwn/*;
+do
+	if [ -f $file ]; then
+		file_up=$file # normal case for move
+		declare -l file
+		file=$file # lower case for comparisons
+
+		if [[ $file == *.jpg ]]; then
+			echo "$file is JPG"
+		fi
+	fi
+done
+
+# below works as long as the extensions are lowercase
+# # torrent
+# for f in "${ex_tor[@]}"
+# do
+# 	mv *.$f ${folders[0]}
+# done
+# # img
+# for f in "${ex_img[@]}"
+# do
+# 	mv *.$f ${folders[1]}
+# done
+# # webm
+# for f in "${ex_web[@]}"
+# do
+# 	mv *.$f ${folders[2]}
+# done
+# # exe
+# for f in "${ex_ex[@]}"
+# do
+# 	mv *.$f ${folders[3]}
+# done
+# # compressed
+# for f in "${ex_com[@]}"
+# do
+# 	mv *.$f ${folders[4]}
+# done
+# # vid
+# for f in "${ex_vid[@]}"
+# do
+# 	mv *.$f ${folders[5]}
+# done
+# # oth
+# for f in "${ex_oth[@]}"
+# do
+# 	mv *.$f ${folders[6]}
+# done
