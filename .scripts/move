@@ -12,7 +12,7 @@ ex_tor=(torrent)
 ex_img=(jpg png gif jpeg bmp webp
 	JPG PNG)
 ex_web=(webm)
-ex_ex=(exe msi) # probably unnecessary
+ex_exe=(exe msi) # probably unnecessary
 ex_com=(rar zip 7z dmg tar.xz)
 ex_vid=(mp4 avi flv ts mov wmv mkv 3gp m4v mpg
 	MOV MP4)
@@ -31,8 +31,8 @@ do
 	if [ ! -d $dwn/$f ]; then
 		mkdir $dwn/$f
 		echo -e "$dwn/$f\tcreated"
-	else
-		echo -e "$dwn/$f\talready exists"
+	# else
+	# 	echo -e "$dwn/$f\talready exists"
 	fi
 done
 
@@ -42,38 +42,50 @@ cd ~/Downloads
 #   currently not that pretty looking because of all the cannot stat errors (#9)
 # -n if the filename already exists, won't move
 
-# torrent
-for f in "${ex_tor[@]}"
+for file in *
 do
-	mv -vn *.$f ${folders[0]}
-done
-# img
-for f in "${ex_img[@]}"
-do
-	mv -vn *.$f ${folders[1]}
-done
-# webm
-for f in "${ex_web[@]}"
-do
-	mv -vn *.$f ${folders[2]}
-done
-# exe
-for f in "${ex_ex[@]}"
-do
-	mv -vn *.$f ${folders[3]}
-done
-# compressed
-for f in "${ex_com[@]}"
-do
-	mv -vn *.$f ${folders[4]}
-done
-# vid
-for f in "${ex_vid[@]}"
-do
-	mv -vn *.$f ${folders[5]}
-done
-# oth
-for f in "${ex_oth[@]}"
-do
-	mv -vn *.$f ${folders[6]}
+	if [ -f "$file" ]; then
+		for ex in "${ex_tor[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[0]}
+			fi
+		done
+		for ex in "${ex_img[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[1]}
+			fi
+		done
+		for ex in "${ex_web[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[2]}
+			fi
+		done
+		for ex in "${ex_exe[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[3]}
+			fi
+		done
+		for ex in "${ex_com[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[4]}
+			fi
+		done
+		for ex in "${ex_vid[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[5]}
+			fi
+		done
+		for ex in "${ex_oth[@]}"
+		do
+			if [[ $file == *$ex ]]; then
+				mv -vn $file ${folders[6]}
+			fi
+		done
+	fi
 done
