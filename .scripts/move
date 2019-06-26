@@ -38,38 +38,42 @@ done
 
 cd ~/Downloads
 
+# -v verbose, makes it so you can see the file is moved (#11)
+#   currently not that pretty looking because of all the cannot stat errors (#9)
+# -n if the filename already exists, won't move
+
 # torrent
 for f in "${ex_tor[@]}"
 do
-	mv *.$f ${folders[0]}
+	mv -vn *.$f ${folders[0]}
 done
 # img
 for f in "${ex_img[@]}"
 do
-	mv *.$f ${folders[1]}
+	mv -vn *.$f ${folders[1]}
 done
 # webm
 for f in "${ex_web[@]}"
 do
-	mv *.$f ${folders[2]}
+	mv -vn *.$f ${folders[2]}
 done
 # exe
 for f in "${ex_ex[@]}"
 do
-	mv *.$f ${folders[3]}
+	mv -vn *.$f ${folders[3]}
 done
 # compressed
 for f in "${ex_com[@]}"
 do
-	mv *.$f ${folders[4]}
+	mv -vn *.$f ${folders[4]}
 done
 # vid
 for f in "${ex_vid[@]}"
 do
-	mv *.$f ${folders[5]}
+	mv -vn *.$f ${folders[5]}
 done
 # oth
 for f in "${ex_oth[@]}"
 do
-	mv *.$f ${folders[6]}
+	mv -vn *.$f ${folders[6]}
 done
