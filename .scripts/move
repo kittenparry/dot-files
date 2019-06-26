@@ -52,49 +52,49 @@ do
 		# torrent
 		for ex in "${ex_tor[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[0]}
 			fi
 		done
 		# image
 		for ex in "${ex_img[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[1]}
 			fi
 		done
 		# webm
 		for ex in "${ex_web[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[2]}
 			fi
 		done
 		# exe
 		for ex in "${ex_exe[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[3]}
 			fi
 		done
 		# compressed
 		for ex in "${ex_com[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[4]}
 			fi
 		done
 		# video
 		for ex in "${ex_vid[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[5]}
 			fi
 		done
 		# other
 		for ex in "${ex_oth[@]}"
 		do
-			if [[ $file == *$ex ]]; then
+			if [[ $file == *.$ex ]]; then
 				mv -vn $file ${folders[6]}
 			fi
 		done
