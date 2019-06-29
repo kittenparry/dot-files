@@ -154,3 +154,15 @@ source ~/.cache/wal/colors-tty.sh
 # Infitine history size (empty or less than 0 works fine)
 HISTSIZE= 
 HISTFILESIZE=
+
+# aliases
+alias history='history | less'
+
+# dict $1 | less function (#15)
+dic () {
+	if [[ $1 ]]; then
+		dict "$1" | colorit | less -R
+	else
+		echo 'usage: dic <word>'
+	fi
+}
