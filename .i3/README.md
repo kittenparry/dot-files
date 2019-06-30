@@ -25,6 +25,7 @@
 	* ~~Gave back Steam Library to root by `sudo chown -R root:root /mnt/disk-ga/SteamLibrary`, otherwise I think I needed to reinstall all the games.~~
 		* Ended up deleting the folder, creating it with correct permissions (eg. user permission) and re-installing games because I was receiving write errors on updates.
 * League of Legends symlink so that Lutris doesn't just install it in home directory and partition `ln -s /mnt/disk-ga/lutris/league-of-legends ~/.wine-appimage-lol`
+* `ffmpeg -i videofilename.ext out%5d.png`, get frames from a video (video to png). `-ss` option to specify a starting second and `-t` for the duration, eg. `ffmpeg -i videofilename.ext -ss 10 -t 1 out%5d.png`
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
