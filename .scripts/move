@@ -42,61 +42,38 @@ cd ~/Downloads
 #   currently not that pretty looking because of all the cannot stat errors (#9)
 # -n if the filename already exists, won't move
 
+# check and move
+# chmov "${ex_tor[@]}" "$file" ${folders[0]}
+chmov () {
+	for ex in "$1"
+	do
+		if [[ $2 == *.$ex ]]; then
+			mv -vn "$2" $3
+		fi
+	done
+}
+
 # loop through everything in folder
 # check if it's a file
+# using chmov above
 # loop through extensions of each category
 # and move files accordingly if they match any
 for file in *
 do
 	if [ -f "$file" ]; then
 		# torrent
-		for ex in "${ex_tor[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[0]}
-			fi
-		done
+		chmov "${ex_tor[@]}" "$file" ${folders[0]}
 		# image
-		for ex in "${ex_img[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[1]}
-			fi
-		done
+		chmov "${ex_img[@]}" "$file" ${folders[1]}
 		# webm
-		for ex in "${ex_web[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[2]}
-			fi
-		done
+		chmov "${ex_web[@]}" "$file" ${folders[2]}
 		# exe
-		for ex in "${ex_exe[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[3]}
-			fi
-		done
+		chmov "${ex_exe[@]}" "$file" ${folders[3]}
 		# compressed
-		for ex in "${ex_com[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[4]}
-			fi
-		done
+		chmov "${ex_com[@]}" "$file" ${folders[4]}
 		# video
-		for ex in "${ex_vid[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[5]}
-			fi
-		done
+		chmov "${ex_vid[@]}" "$file" ${folders[5]}
 		# other
-		for ex in "${ex_oth[@]}"
-		do
-			if [[ $file == *.$ex ]]; then
-				mv -vn "$file" ${folders[6]}
-			fi
-		done
+		chmov "${ex_oth[@]}" "$file" ${folders[6]}
 	fi
 done
