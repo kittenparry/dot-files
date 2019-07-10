@@ -549,6 +549,7 @@ exec ~/.scripts/run_log_recorder
 exec --no-startup-id dropbox start
 exec --no-startup-id deluge
 exec --no-startup-id qbittorrent
+exec --no-startup-id transmission-qt
 exec_always ~/.scripts/backup_all
 # to turn on Force Composition Pipeline on start
 # exec terminal -e 'sudo nvidia-settings'
@@ -570,6 +571,7 @@ assign [class="Steam"] $ws7
 assign [class="Deluge"] $ws8
 assign [class="qBittorrent"] $ws8
 assign [class="JDownloader"] $ws8
+assign [class="transmission"] $ws8
 assign [class="Firefox"] $ws8
 assign [class="Quodlibet"] $ws11
 assign [class="Lutris"] $ws18
@@ -589,6 +591,7 @@ for_window [class="discord"] layout tabbed
 for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
 for_window [class="Deluge"] layout tabbed
+for_window [class="transmission"] layout tabbed
 
 ########################
 ######### games ########
