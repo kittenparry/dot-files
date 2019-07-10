@@ -526,9 +526,9 @@ bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
 workspace $ws20 output $mon2
-workspace $ws11 output $mon2
 # make sure ws19 never spawns on second monitor
 workspace $ws19 output $mon1
+workspace $ws7 output $mon1
 # the above also boots into ws19 so i'm adding below
 workspace $ws1 output $mon1
 # workspace $ws9 output $mon2
