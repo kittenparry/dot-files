@@ -24,6 +24,7 @@ ex_oth=(
 	renpy srt apk sdltm dll py pak vsix icns circ
 	pls bat c
 )
+exs=(ex_tor ex_img ex_web ex_exe ex_com ex_vid ex_oth)
 
 # create subfolders if they don't exist
 for f in "${folders[@]}"
@@ -43,37 +44,31 @@ cd ~/Downloads
 # -n if the filename already exists, won't move
 
 # check and move
-# chmov "${ex_tor[@]}" "$file" ${folders[0]}
+# chmov ex_tor "$file" 0
 chmov () {
-	for ex in "$1"
+	# array name into a local var instead of passing an array (which spreads args by default)
+	local -n arr=$1
+	for ex in "${arr[@]}"
 	do
 		if [[ $2 == *.$ex ]]; then
-			mv -vn "$2" $3
+			mv -vn "$2" ${folders[$3]}
 		fi
 	done
 }
 
 # loop through everything in folder
 # check if it's a file
+# loop through extensions for each different iteration
 # using chmov above
 # loop through extensions of each category
 # and move files accordingly if they match any
 for file in *
 do
 	if [ -f "$file" ]; then
-		# torrent
-		chmov "${ex_tor[@]}" "$file" ${folders[0]}
-		# image
-		chmov "${ex_img[@]}" "$file" ${folders[1]}
-		# webm
-		chmov "${ex_web[@]}" "$file" ${folders[2]}
-		# exe
-		chmov "${ex_exe[@]}" "$file" ${folders[3]}
-		# compressed
-		chmov "${ex_com[@]}" "$file" ${folders[4]}
-		# video
-		chmov "${ex_vid[@]}" "$file" ${folders[5]}
-		# other
-		chmov "${ex_oth[@]}" "$file" ${folders[6]}
+		# ! addition changes i to 0..6 from ex_tor..ex_oth
+		for i in "${!exs[@]}"
+		do
+			chmov ${exs[i]} "$file" $i
+		done
 	fi
 done
