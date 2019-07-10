@@ -14,7 +14,7 @@ text/plain=org.gnome.gedit.desktop
 x-scheme-handler/mailto=userapp-Thunderbird.desktop
 message/rfc822=userapp-Thunderbird.desktop
 application/pdf=epdfview.desktop
-application/x-bittorrent=deluge.desktop
+application/x-bittorrent=transmission-qt.desktop
 ############################################## video #################
 video/x-matroska=mpv.desktop;vlc.desktop;                            # mkv
 video/mp4=mpv.desktop;vlc.desktop;                                   # mp4, m4v, 3gp
@@ -30,7 +30,8 @@ image/jpeg=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop;     # jpg, jpeg
 image/png=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop;      # png
 image/x-ms-bmp=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop; # bmp
 image/webp=sxiv-rifle.desktop;viewnior.desktop;gpicview.desktop;     # webp
-x-scheme-handler/magnet=deluge.desktop
+x-scheme-handler/magnet=transmission-qt.desktop
+x-scheme-handler/postman=Postman.desktop
 
 
 [Added Associations]
@@ -51,7 +52,6 @@ text/plain=mousepad.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird.desktop;
 message/rfc822=userapp-Thunderbird.desktop;
 application/pdf=epdfview.desktop;
-application/x-bittorrent=deluge.desktop;
-application/x-torrent=deluge.desktop;
+application/x-torrent=transmission-qt.desktop
 inode/socket=mousepad.desktop;
 application/octet-stream=mousepad.desktop;
