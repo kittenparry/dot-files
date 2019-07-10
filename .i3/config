@@ -526,6 +526,7 @@ bindsym $mod+F4 exec pamac-manager
 
 # second monitor ws assign
 workspace $ws20 output $mon2
+workspace $ws11 output $mon2
 # make sure ws19 never spawns on second monitor
 workspace $ws19 output $mon1
 # the above also boots into ws19 so i'm adding below
@@ -570,6 +571,7 @@ assign [class="Deluge"] $ws8
 assign [class="qBittorrent"] $ws8
 assign [class="JDownloader"] $ws8
 assign [class="Firefox"] $ws8
+assign [class="Quodlibet"] $ws11
 assign [class="Lutris"] $ws18
 assign [class="Spotify"] $ws20
 assign [class="discord"] $ws20

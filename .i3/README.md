@@ -26,6 +26,7 @@
 		* Ended up deleting the folder, creating it with correct permissions (eg. user permission) and re-installing games because I was receiving write errors on updates.
 * League of Legends symlink so that Lutris doesn't just install it in home directory and partition `ln -s /mnt/disk-ga/lutris/league-of-legends ~/.wine-appimage-lol`
 * `ffmpeg -i videofilename.ext out%5d.png`, get frames from a video (video to png). `-ss` option to specify a starting second and `-t` for the duration, eg. `ffmpeg -i videofilename.ext -ss 10 -t 1 out%5d.png`
+* `gtk-application-prefer-dark-theme=false` in `$HOME/.config/gtk-3.0/settings.ini` to fix some GTK programs not following the settings of `lxappearance`.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
