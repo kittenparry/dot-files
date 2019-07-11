@@ -172,13 +172,18 @@ dic() {
 
 # source of lyrics-crawler script: https://github.com/willamesoares/lyrics-crawler
 # function instead of an alias to allow custom searches: lyrics artist song-name
+#
+# python $HOME/git/lyrics-crawler/get-lyric.py "what else is there" enslaved | lolcat -p 2 -F 0.001 -S 7777 -f | less -R
+# -p spread, -F frequency, -S seed, -f force colour
+# current options outputs a pink-ish colour
 lyrics() {
 	local cmd="python $HOME/git/lyrics-crawler/get-lyric.py"
+	local lol="lolcat -p 2 -F 0.001 -S 7777 -f"
 	if [[ $1 && $2 ]]; then
-		$cmd "$2" "$1" | less
+		$cmd "$2" "$1" | $lol | less -R
 	elif [[ $1 || $2 ]]; then
 		echo -e 'usage:\tlyrics <artist> <song>\nOR\tlyrics'
 	else
-		$cmd | less
+		$cmd | $lol | less -R
 	fi
 }
