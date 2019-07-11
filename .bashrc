@@ -160,24 +160,25 @@ HISTFILESIZE=
 # ALIASES
 alias history='history | less'
 
+
+# dict $1 | less function (#15)
+dic() {
+	if [[ $1 ]]; then
+		dict "$1" | colorit | less -R
+	else
+		echo -e 'usage:\tdic <word>'
+	fi
+}
+
 # source of lyrics-crawler script: https://github.com/willamesoares/lyrics-crawler
 # function instead of an alias to allow custom searches: lyrics artist song-name
-lyrics () {
+lyrics() {
 	local cmd="python $HOME/git/lyrics-crawler/get-lyric.py"
 	if [[ $1 && $2 ]]; then
 		$cmd "$2" "$1" | less
 	elif [[ $1 || $2 ]]; then
-		echo -e 'usage:\tlyrics artist song-name\nOR\tlyrics'
+		echo -e 'usage:\tlyrics <artist> <song>\nOR\tlyrics'
 	else
 		$cmd | less
-	fi
-}
-
-# dict $1 | less function (#15)
-dic () {
-	if [[ $1 ]]; then
-		dict "$1" | colorit | less -R
-	else
-		echo 'usage: dic <word>'
 	fi
 }
