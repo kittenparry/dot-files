@@ -28,6 +28,7 @@
 * `ffmpeg -i videofilename.ext out%5d.png`, get frames from a video (video to png). `-ss` option to specify a starting second and `-t` for the duration, eg. `ffmpeg -i videofilename.ext -ss 10 -t 1 out%5d.png`
 * `gtk-application-prefer-dark-theme=false` in `$HOME/.config/gtk-3.0/settings.ini` to fix some GTK programs not following the settings of `lxappearance`.
 * DOOM works properly with sounds using [steam-dos](https://github.com/dreamer/steam-dos) compatibility tool by creating the directory `~/.local/share/Steam/compatibilitytools.d/` and following the rest of the instructions with it.
+* `ln -s /mnt/disk-j/recordurbate ~/programs/recordurbate/videos` to create [Recordurbate](https://github.com/oliverjrose99/Recordurbate) symlink.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
