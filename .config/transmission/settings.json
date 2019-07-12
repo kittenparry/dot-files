@@ -1,0 +1,17 @@
+{
+	"download-dir": "/mnt/disk-j/lin_downs",
+	"download-queue-size": 15,
+	"ratio-limit": 0,
+	"ratio-limit-enabled": true,
+	"show-notification-area-icon": true,
+	"sort-mode": "sort-by-age",
+	"sort-reversed": false,
+	"speed-limit-down": 7000,
+	"speed-limit-down-enabled": true,
+	"speed-limit-up": 30,
+	"speed-limit-up-enabled": true,
+	"statusbar-stats": "total-transfer",
+	"torrent-added-notification-enabled": false,
+	"torrent-complete-notification-enabled": true,
+	"torrent-complete-sound-enabled": false,
+}
