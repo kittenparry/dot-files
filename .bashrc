@@ -178,12 +178,12 @@ dic() {
 # current options outputs a pink-ish colour
 lyrics() {
 	local cmd="python $HOME/git/lyrics-crawler/get-lyric.py"
-	local lol="lolcat -p 2 -F 0.001 -S 7777 -f"
+	# local lol="lolcat -p 2 -F 0.001 -S 7777 -f"
 	if [[ $1 && $2 ]]; then
-		$cmd "$2" "$1" | $lol | less -R
+		$cmd "$2" "$1"  | less -R
 	elif [[ $1 || $2 ]]; then
 		echo -e 'usage:\tlyrics <artist> <song>\nOR\tlyrics'
 	else
-		$cmd | $lol | less -R
+		$cmd | less -R
 	fi
 }
