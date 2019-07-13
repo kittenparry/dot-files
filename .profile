@@ -7,3 +7,4 @@ export BROWSER=/usr/bin/google-chrome-stable
 if [ -d "$HOME/.scripts" ]; then
 	export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 fi
+export BAT_THEME="GitHub" # GitHub or base16 for light theme
