@@ -222,8 +222,8 @@ ws-icon-8 = 9;
 ws-icon-9 = 10;
 # FA-icon: music
 ws-icon-10 = 11; 
-# 
-ws-icon-11 = 12;
+# FA-icon: sticky-note
+ws-icon-11 = 12; 
 # 
 ws-icon-12 = 13;
 # 

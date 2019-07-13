@@ -574,6 +574,7 @@ assign [class="JDownloader"] $ws8
 assign [class="transmission"] $ws8
 assign [class="Firefox"] $ws8
 assign [class="Quodlibet"] $ws11
+assign [class="Simplenote"] $ws12
 assign [class="Lutris"] $ws18
 assign [class="Spotify"] $ws20
 assign [class="discord"] $ws20
@@ -592,6 +593,7 @@ for_window [class="Logrecorder"] floating enable
 for_window [class="com-rarchives-ripme-App"] floating enable
 for_window [class="Deluge"] layout tabbed
 for_window [class="transmission"] layout tabbed
+for_window [class="Simplenote"] floating enable
 
 ########################
 ######### games ########
