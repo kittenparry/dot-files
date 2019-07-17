@@ -74,4 +74,4 @@ else
 	arg=`date +%Y.%m.%d`
 fi
 
-cat $path | grep --color=always -e "$arg" | less -R
+cat $path | grep -i --color=always -e "$arg" | less -R
