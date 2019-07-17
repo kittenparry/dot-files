@@ -575,6 +575,8 @@ assign [class="transmission"] $ws8
 assign [class="Firefox"] $ws8
 assign [class="Quodlibet"] $ws11
 assign [class="Simplenote"] $ws12
+# hydrus client, hope it won't clash with other possible class names
+assign [class="Client"] $ws13
 assign [class="Lutris"] $ws18
 assign [class="Spotify"] $ws20
 assign [class="discord"] $ws20

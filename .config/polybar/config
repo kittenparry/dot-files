@@ -224,8 +224,8 @@ ws-icon-9 = 10;
 ws-icon-10 = 11; 
 # FA-icon: sticky-note
 ws-icon-11 = 12; 
-# 
-ws-icon-12 = 13;
+# FA-icon: images
+ws-icon-12 = 13; 
 # 
 ws-icon-13 = 14;
 # 
