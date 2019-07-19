@@ -19,7 +19,7 @@ Options:
 while [ $# -gt 0 ]
 do
 	case $1 in
-		-h)
+		-h|--help)
 			if [[ $2 && $2 -eq 0 ]]; then
 				arg=$1
 			else
