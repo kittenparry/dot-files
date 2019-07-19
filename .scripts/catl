@@ -1,26 +1,6 @@
 #!/bin/bash
 
 # grep from myLogs.txt
-# explanation of the if-else statements in the code:
-#
-# if given an argument:
-#   if it is '-d':
-#     if given a second argument between 1..31:
-#       if it has one digit append a leading zero
-#       grep month's entries of that day
-#     else if given second argument is 0 grep '-d'
-#     else print usage and exit
-#   else if it is '-l': (L)
-#     if given a second argument as an integer:
-#       grep the last n entries
-#     else if given second argument is 0 grep '-l'
-#     else print usage and exit
-#   else if it is '-h' or '--help':
-#     if given a second argument as 0:
-#       grep '-h' or '--help'
-#     else print help message and exit
-#   else grep entries with the argument
-# else grep today's entries
 
 path=~/Dropbox/Other/myLogs.txt
 help_d=$'Usage: catl -d 1..31\nfor "-d" search: catl -d 0'
@@ -35,43 +15,46 @@ Options:
   -h, --help\tShow this message and exit.
 	\t-h/--help 0 to grep "-h" or "--help"'
 
-if [[ $1 ]]; then
-	in=$1
-	if [[ $in == '-d' ]]; then
-		if [[ $2 && $2 -gt 0 && $2 -lt 32 ]]; then
-			day=$2
-			if [[ ${#day} == 1 ]]; then
-				day="0$day"
-			fi
-			arg=`date +%Y.%m.`$day
-		elif [[ $2 && $2 -eq 0 ]]; then
-			arg=$in
-		else
-			echo "$help_d"
-			exit 1
-		fi
-	elif [[ $in == '-l' ]]; then
-		if [[ $2 && $2 -gt 0 ]]; then
-			cat $path | tail -$2 | less
-			exit 1
-		elif [[ $2 && $2 -eq 0 ]]; then
-			arg=$in
-		else
-			echo "$help_l"
-			exit 1
-		fi
-	elif [[ $in == '-h' || $in == '--help' ]]; then
-		if [[ $2 && $2 -eq 0 ]]; then
-			arg=$in
-		else
-			echo "$help_h"
-			exit 1
-		fi
-	else
-		arg=$in
-	fi
-else
+
+while [ $# -gt 0 ]
+do
+	case $1 in
+		# TODO: catch non-int values for length and day, probably also print out the help
+		-l) length="$2"; shift 2 ;;
+		-d) day="$2"; shift 2 ;;
+		*) arg="$1"; shift 1 ;;
+	esac
+done
+
+# if no arg && no length && no day
+# set today as arg
+if [[ -z "${arg+x}" && -z "${length+x}" && -z "${day+x}" ]]; then
 	arg=`date +%Y.%m.%d`
 fi
 
-cat $path | grep -i --color=always -e "$arg" | less -R
+# set arg as date of the given day
+# append a leading 0 if only 1 digit is entered
+if [ -n "${day+x}" ]; then
+	if [[ ${#day} == 1 ]]; then
+			day="0$day"
+	fi
+	arg=`date +%Y.%m.`$day
+fi
+
+# if lenght is provided tail accordingly
+# -l %d -d %d
+# -l %d %arg
+# ---
+# -l %d
+# else just pipe arg into less without tail
+# -d %d
+# %arg
+if [ -n "${length+x}" ]; then
+	if [ -n "${arg+x}" ]; then
+		cat $path | grep -i --color=always -e "$arg" | tail -$length | less -R
+	else
+		cat $path | tail -$length | less
+	fi
+else
+	cat $path | grep -i --color=always -e "$arg" | less -R
+fi
