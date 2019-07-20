@@ -32,6 +32,7 @@
 * DOOM works properly with sounds using [steam-dos](https://github.com/dreamer/steam-dos) compatibility tool by creating the directory `~/.local/share/Steam/compatibilitytools.d/` and following the rest of the instructions with it.
 * `ln -s /mnt/disk-j/recordurbate ~/programs/recordurbate/videos` to create [Recordurbate](https://github.com/oliverjrose99/Recordurbate) symlink.
 * To generate a new locale uncomment the ones desired in `/etc/locale.gen`. `sudo locale-gen` to generate them. To check the available ones `locale -a`. To run a program with different locale for example `LANG=ja_JP.UTF-8 wine $name`.
+* `sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts` to fix emoji and Japanese characters not displaying correctly in programs like Chrome and Discord.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
