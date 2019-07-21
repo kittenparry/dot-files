@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# back up myLogs.txt to different partitions on different HDDs
+# with dates (YYYY-MM-DD) stamped to directories
+# eg. $HOME/Dropbox/Other/myLogs.txt --> /mnt/disk-e/_logs.linux/2019-07-21/myLogs.txt
+
+logs=$HOME/Dropbox/Other/myLogs.txt
+pre=/mnt/disk-
+# no i or k for the moment
+disk_arr=(d e f g h j)
+aft=_logs.linux
+time=`date +%Y-%m-%d`
+
+for letter in "${disk_arr[@]}"
+do
+	path=$pre$letter/$aft/$time/
+	mkdir -p $path
+	if cp $logs $path; then
+		echo -e "backed up to\t$path"
+	else
+		echo -e "failed to\t$path"
+	fi
+done
