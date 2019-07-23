@@ -8,3 +8,5 @@ if [ -d "$HOME/.scripts" ]; then
 	export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 fi
 export BAT_THEME="GitHub" # GitHub or base16 for light theme
+# fixes VLC and Calibre's scaling issue (#20)
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
