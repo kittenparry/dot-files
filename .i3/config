@@ -523,6 +523,8 @@ bindsym $mod+Shift+Tab workspace prev
 # mouse bind, not as good a program sa sharex
 bindsym Ctrl+Print exec gnome-screenshot -i
 bindsym $mod+F4 exec pamac-manager
+# best jokester on the planet, eh? definitely some original idea here (!)
+bindsym Control+Mod1+Delete exec --no-startup-id blurlock
 
 # second monitor ws assign
 workspace $ws20 output $mon2
