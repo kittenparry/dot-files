@@ -226,8 +226,8 @@ ws-icon-10 = 11; 
 ws-icon-11 = 12; 
 # FA-icon: images
 ws-icon-12 = 13; 
-# 
-ws-icon-13 = 14;
+# FA-icon: tv
+ws-icon-13 = 14; 
 # 
 ws-icon-14 = 15;
 # 
