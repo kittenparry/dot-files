@@ -560,6 +560,8 @@ exec_always ~/.scripts/blogs
 # exec terminal -e 'sudo nvidia-settings'
 # turn on num lock on start
 exec xdotool key Num_Lock
+# mouse scroll speed fix with its config file
+exec imwheel
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1

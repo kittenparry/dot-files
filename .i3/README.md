@@ -34,7 +34,8 @@
 * To generate a new locale uncomment the ones desired in `/etc/locale.gen`. `sudo locale-gen` to generate them. To check the available ones `locale -a`. To run a program with different locale for example `LANG=ja_JP.UTF-8 wine $name`.
 * `sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts` to fix emoji and Japanese characters not displaying correctly in programs like Chrome and Discord.
 * In GIMP, Edit > Preferences > Interface > Display, Monitor Resolution, decrease automatically detected 305x305 ppi to 100x100 to fix [#20](https://github.com/kittenparry/dot-files/issues/20).
-* To fix Opera's video playback problem, install `pepper-flash`.
+* ~~To fix Opera's video playback problem, install `pepper-flash`~~ Doesn't work.
+* `imwheel` to "fix" the mouse scroll speed.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
