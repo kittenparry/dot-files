@@ -328,6 +328,12 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
+				# additional binds for greater units of length
+        bindsym Shift+Left resize shrink width 25 px or 25 ppt
+        bindsym Shift+Down resize grow height 25 px or 25 ppt
+        bindsym Shift+Up resize shrink height 25 px or 25 ppt
+        bindsym Shift+Right resize grow width 25 px or 25 ppt
+
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -513,6 +519,9 @@ exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 # also isn't necessary anymore after changing tkinter's scaling in log recorder
 # exec_always xrandr --dpi 96
 
+# Custom variables
+set $t_lyrics "lyrics_term"
+
 # Custom binds
 bindsym $mod+Shift+x exec --no-startup-id blurlock
 bindsym $mod+Shift+z exec polybar-msg cmd toggle
@@ -603,6 +612,7 @@ for_window [class="com-rarchives-ripme-App"] floating enable
 for_window [class="Deluge"] layout tabbed
 for_window [class="transmission"] layout tabbed
 for_window [class="Simplenote"] floating enable
+for_window [instance=$t_lyrics] floating enable
 
 ########################
 ######### games ########
