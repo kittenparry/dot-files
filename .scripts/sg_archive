@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# compress and move aside SuicideGirls directories for archival
+# a direct port of its batch counterpart:
+# https://github.com/kittenparry/small-scripts/blob/master/bat/sg_archive.bat
+
+sg_root=/mnt/disk-f/_suicidegirls
+sg_new=$sg_root/__n/
+sg_arc=$sg_root/__a/
+
+cd $sg_new
+
+for d in *
+do
+	if [ -d "$d" ]; then
+		7z a "$d.7z" "./$d/*" -mhe=on -mx0
+		cd $d
+		mkdir $sg_root/$d
+		mv * $sg_root/$d/
+		cd ..
+		rmdir $d
+	fi
+done
+
+mv *.7z $sg_arc
