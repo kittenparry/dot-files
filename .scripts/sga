@@ -16,8 +16,6 @@ do
 		7z a "$d.7z" "./$d/*" -mhe=on -mx0
 		cd $d
 		mkdir $sg_root/$d
-		# for f in *; do cp -p -r "$f" "$f.jpg"; done; find . -type f  ! -name "*.*"  -delete
-		# this is better, but i don't need it anymore
 		mv * $sg_root/$d/
 		cd ..
 		rmdir $d
