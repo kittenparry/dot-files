@@ -50,7 +50,14 @@ if cp ~/.config/unity3d/Ludeon\ Studios/RimWorld\ by\ Ludeon\ Studios/Config/* ~
 else
 	pre=$pre_f
 fi
-msg+="$pre rimworld configs"
+msg+="$pre rimworld configs\n"
+
+if cp /mnt/disk-f/_suicidegirls/__n/log ~/Dropbox/sg/; then
+	pre=$pre_s
+else
+	pre=$pre_f
+fi
+msg+="$pre sg log"
 
 
 echo -e "$msg"
