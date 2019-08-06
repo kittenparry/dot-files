@@ -16,14 +16,8 @@ do
 		7z a "$d.7z" "./$d/*" -mhe=on -mx0
 		cd $d
 		mkdir $sg_root/$d
-		# TODO: for f in *; do mv "$f" "$f.jpg"; done
-		# for f in *; do cp -p -r "$f" "../test2/$f.jpg"; done
-		# second one preserves date/time of modifications
-		# also need to do before zipping
-		# so maybe an actual copying might be better then
-		# then zipping
-		# then rm -rf of every directory after zips are moved
-		# also TODO: redo all the directories you did before
+		# for f in *; do cp -p -r "$f" "$f.jpg"; done; find . -type f  ! -name "*.*"  -delete
+		# this is better, but i don't need it anymore
 		mv * $sg_root/$d/
 		cd ..
 		rmdir $d
