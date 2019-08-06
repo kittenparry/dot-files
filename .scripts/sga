@@ -10,6 +10,8 @@ sg_arc=$sg_root/__a/
 
 cd $sg_new
 
+num_of_dirs=$(find */ -maxdepth 0 -type d | wc -l)
+start_time="$(date -u +%s)"
 for d in *
 do
 	if [ -d "$d" ]; then
@@ -23,3 +25,8 @@ do
 done
 
 mv *.7z $sg_arc
+
+end_time="$(date -u +%s)"
+elapsed="$(($end_time-$start_time))"
+day=`date +%Y.%m.%d`
+echo "$elapsed seconds to process $num_of_dirs directories. $day" >> $sg_new/log_arch
