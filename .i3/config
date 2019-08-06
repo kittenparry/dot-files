@@ -613,6 +613,7 @@ for_window [class="Deluge"] layout tabbed
 for_window [class="transmission"] layout tabbed
 for_window [class="Simplenote"] floating enable
 for_window [instance=$t_lyrics] floating enable
+for_window [class="Sgdwn"] floating enable
 
 ########################
 ######### games ########
