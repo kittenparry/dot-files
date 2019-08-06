@@ -52,12 +52,21 @@ else
 fi
 msg+="$pre rimworld configs\n"
 
+# SG logs
 if cp /mnt/disk-f/_suicidegirls/__n/log ~/Dropbox/sg/; then
 	pre=$pre_s
 else
 	pre=$pre_f
 fi
-msg+="$pre sg log"
+msg+="$pre sg log\n"
+
+# SG archive logs
+if cp /mnt/disk-f/_suicidegirls/__n/log_arch ~/Dropbox/sg/; then
+	pre=$pre_s
+else
+	pre=$pre_f
+fi
+msg+="$pre sg arch log"
 
 
 echo -e "$msg"

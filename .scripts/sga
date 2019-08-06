@@ -28,5 +28,5 @@ mv *.7z $sg_arc
 
 end_time="$(date -u +%s)"
 elapsed="$(($end_time-$start_time))"
-day=`date +%Y.%m.%d`
-echo "$elapsed seconds to process $num_of_dirs directories. $day" >> $sg_new/log_arch
+day=$(date "+%Y.%m.%d %H:%M:%S")
+echo "$day: $elapsed seconds to process $num_of_dirs directories." >> $sg_new/log_arch
