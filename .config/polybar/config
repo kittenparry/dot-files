@@ -61,7 +61,7 @@ font-5 = Bitstream Vera Sans Mono:pixelsize=10;1
 modules-left = bspwm i3
 # not sure if running eth twice is healthy
 modules-center = player-moc spotify eth eth2
-modules-right = filesystem pulseaudio notification-reddit memory cpu temperature system-uptime-pretty date powermenu
+modules-right = filesystem pulseaudio notification-reddit memory cpu system-uptime-pretty date powermenu
 
 tray-position = ${env:TRAY_POSITION:right}
 tray-padding = 2
@@ -117,7 +117,7 @@ font-5 = Bitstream Vera Sans Mono:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = eth eth2
-modules-right = filesystem pulseaudio notification-reddit memory cpu temperature system-uptime-pretty date powermenu
+modules-right = filesystem pulseaudio notification-reddit memory cpu system-uptime-pretty date powermenu
 
 ;tray-position = ${env:TRAY_POSITION:right}
 ;tray-padding = 2
