@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# launch web pages with rofi
+# somewhat of a clone of startpage i tried designing:
+# https://github.com/kittenparry/startpage
+
+out=''
+list=(
+	'4:\t 4chan.org'
+	'd:\t drive.google.com'
+	'e:\t en.metal-tracker.com'
+	'g:\t github.com'
+	'gm:\t gmail.com'
+	'i:\t instagram.com'
+	'k:\t keep.google.com'
+	'r:\t reddit.com'
+	'ra:\t rarbg.to/torrents.php?category=2;4'
+	's:\t store.steampowered.com'
+	't:\t twitch.tv'
+	'tr:\t trakt.tv'
+	'y:\t youtube.com'
+
+	# TODO: probably an array of its own instead of this?
+	# FIXME: some above gets prioritised over this 'r ..'
+	# r
+	'r 2:\t 2meirl4meirl'
+	'r c:\t coolgithubprojects'
+	'r d:\t Dota2'
+	'r da:\t DataHoarder'
+	'r s:\t suicidegirls'
+	'r u:\t unixporn'
+	# rn
+	'rn k:\t KaylaErinCosplay'
+	'rn f:\t Fay_Suicide'
+)
+
+# join urls with new line
+for url in "${list[@]}"
+do
+	out+="$url\n"
+done
+
+# output into rofi and append a caret to query
+input=$(echo -e $out | rofi -matching regex -dmenu -p page -filter ^)
+
+# if rofi isn't cancelled and an input is selected
+if [[ $input ]]; then
+	# split into an array
+	IFS=' ' read -r -a site <<< "$input"
+	unset IFS
+	# if len 2,
+	#   if ^r, page is a subreddit
+	#   elif ^rn, page is a subreddit/new
+	#   elif ^s, a search query
+	#   else, one of the selection or check FIXME: below
+	# elif len 3,
+	#   if starts with r, one of the listed subs
+	#   elif starts with rn, one of the listed subs/new
+	#
+	# launch with chrome
+	# TODO: option to launch with opera
+	# could maybe get the current window's class and launch browser accordingly
+	if [ ${#site[@]} == 2 ]; then
+		if [ ${site[0]} == '^r' ]; then
+			page="reddit.com/r/${site[1]}"
+		elif [ ${site[0]} == '^rn' ]; then
+			page="reddit.com/r/${site[1]}/new"
+			# FIXME: actually checking if value is in array, and search for everything else,
+			# instead of this lazy "s $query"
+		elif [ ${site[0]} == '^s' ]; then
+			page="duckduckgo.com/?q=${site[1]}"
+		else
+			# FIXME: currently could lead to invalid urls to go through
+			page="${site[1]}"
+		fi
+	elif [ ${#site[@]} == 3 ]; then
+		if [ ${site[0]} == 'r' ]; then
+			page="reddit.com/r/${site[2]}"
+		elif [ ${site[0]} == 'rn' ]; then
+			page="reddit.com/r/${site[2]}/new"
+		fi
+	fi
+	google-chrome-stable "https://$page"
+fi

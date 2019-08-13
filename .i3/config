@@ -125,7 +125,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -525,7 +525,7 @@ set $t_lyrics "lyrics_term"
 # Custom binds
 bindsym $mod+Shift+x exec --no-startup-id blurlock
 bindsym $mod+Shift+z exec polybar-msg cmd toggle
-bindsym $mod+d exec rofi --no-startup-id`` -show run
+bindsym $mod+d exec rofi --no-startup-id -show run
 # grave is `
 bindsym $mod+grave workspace back_and_forth
 bindsym $mod+Shift+grave move container to workspace back_and_forth
@@ -536,6 +536,7 @@ bindsym Ctrl+Print exec gnome-screenshot -i
 bindsym $mod+F4 exec pamac-manager
 # best jokester on the planet, eh? definitely some original idea here (!)
 bindsym Control+Mod1+Delete exec --no-startup-id blurlock
+bindsym $mod+a exec ~/.scripts/sp
 
 # second monitor ws assign
 workspace $ws20 output $mon2
