@@ -1,4 +1,4 @@
-".*-chrome*" # ".*" <- for everything, for chrome -> # ".*-chrome*"
+".*- Opera" # ".*" <- for everything, for chrome -> # ".*-chrome*"
 None,      Up,   Button4, 5
 None,      Down, Button5, 5
 Control_L, Up,   Control_L|Button4
