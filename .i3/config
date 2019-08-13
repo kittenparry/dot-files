@@ -56,7 +56,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec google-chrome-stable
+bindsym $mod+F2 exec $BROWSER
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
@@ -575,15 +575,11 @@ exec imwheel
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
-# assign [class="XTerm"] $ws2
+assign [class="Opera"] $ws1
 assign [class="code-oss"] $ws2
-# maybe not ws2
 assign [class="Tor Browser"] $ws2
 assign [class="Logrecorder"] $ws4
-assign [class="Opera"] $ws5
 assign [class="Pcmanfm"] $ws6
-# assign [class="XTerm ranger"] $ws6
-# assign [class="Sxiv"] $ws6
 assign [class="Steam"] $ws7
 assign [class="Deluge"] $ws8
 assign [class="qBittorrent"] $ws8
