@@ -574,11 +574,11 @@ exec xdotool key Num_Lock
 exec imwheel
 
 # assign to workspaces
-assign [class="Google-chrome"] $ws1
 assign [class="Opera"] $ws1
 assign [class="code-oss"] $ws2
 assign [class="Tor Browser"] $ws2
 assign [class="Logrecorder"] $ws4
+assign [class="Google-chrome"] $ws5
 assign [class="Pcmanfm"] $ws6
 assign [class="Steam"] $ws7
 assign [class="Deluge"] $ws8
