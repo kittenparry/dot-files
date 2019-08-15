@@ -33,22 +33,6 @@ x-scheme-handler/postman=Postman.desktop
 inode/directory=ranger.desktop
 
 [Added Associations]
-x-scheme-handler/http=opera.desktop;
-x-scheme-handler/https=opera.desktop;
-x-scheme-handler/ftp=opera.desktop;
-x-scheme-handler/chrome=opera.desktop;
-text/html=opera.desktop;
-application/x-extension-htm=opera.desktop;
-application/x-extension-html=opera.desktop;
-application/x-extension-shtml=opera.desktop;
-application/xhtml+xml=opera.desktop;
-application/x-extension-xhtml=opera.desktop;
-application/x-extension-xht=opera.desktop;
-image/jpeg=viewnior.desktop;gpicview.desktop;
-image/png=viewnior.desktop;gpicview.desktop;
-text/plain=mousepad.desktop;
-message/rfc822=userapp-Thunderbird.desktop;
-application/pdf=epdfview.desktop;
 application/x-torrent=transmission-qt.desktop
 inode/socket=mousepad.desktop;
 application/octet-stream=mousepad.desktop;
