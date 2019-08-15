@@ -158,6 +158,7 @@ HISTFILESIZE=
 
 # ALIASES
 alias history='history | less'
+alias nano='nano -l'
 
 
 # dict $1 | less function (#15)
