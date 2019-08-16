@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# disk echo
+# launch different partition paths in nnn/ranger
+# eg. de nfa == nnn /mnt/disk-f/Archive
+
+usage='usage:\tde <browser><disk><a|d>?'
+
+if [ $1 ]; then
+	input=$1
+else
+	echo -e $usage
+	exit 1
+fi
+
+browser=$(echo "$input" | grep -oEi '^[n|r]')
+disk=$(echo "$input" | sed s/.//1 | grep -oEi '^[d-k]') # replace 1st character with nothing
+add=$(echo "$input" | sed s/.//1 | sed s/.//1 | grep -oEi '^[a|d]$') # very ugly repetition
+
+path='/mnt/disk-'
+if [ $disk ]; then
+	if [ "$add" == 'd' ]; then
+		add=Downloads
+	elif [ "$add" == 'a' ]; then
+		add=Archive
+	fi
+	path=$path$disk/$add
+	if [ "$browser" == 'n' ]; then
+		nnn $path
+	elif [ "$browser" == 'r' ]; then
+		ranger $path
+	fi
+else
+	echo -e $usage
+	exit 1
+fi
