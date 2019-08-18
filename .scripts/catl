@@ -40,6 +40,9 @@ do
 			shift 2
 		;;
 		-d)
+			# TODO: remove -gt 0 here and add another check to get less than 0
+			# or maybe don't remove -gt 0 and simply have the other checks like the following:
+			# $2 && $2 -lt 0 && -gt -30 (i think), probably not a range that big
 			if [[ $2 && $2 -gt 0 && $2 -lt 32 ]]; then
 				day=$2
 			elif [[ $2 && $2 -eq 0 ]]; then
@@ -74,7 +77,7 @@ if [ -n "${day+x}" ]; then
 	arg=`date +%Y.%m.`$day
 fi
 
-# if lenght is provided tail accordingly
+# if length is provided tail accordingly
 # -l %d -d %d
 # -l %d %arg
 # ---
