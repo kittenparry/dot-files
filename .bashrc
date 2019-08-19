@@ -159,6 +159,7 @@ HISTFILESIZE=
 # ALIASES
 alias history='history | less'
 alias nano='nano -l'
+alias nnn='nnn -i'
 
 
 # dict $1 | less function (#15)
@@ -187,3 +188,15 @@ lyrics() {
 		$cmd | less -R
 	fi
 }
+
+# cd to current dir when quit with shift+g, doesn't work with -i option
+# n() {
+# 	export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
+
+# 	nnn -i "$@"
+
+# 	if [ -f $NNN_TMPFILE ]; then
+# 		. $NNN_TMPFILE
+# 		rm -f $NNN_TMPFILE > /dev/null
+# 	fi
+# }
