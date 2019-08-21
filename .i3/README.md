@@ -36,6 +36,22 @@
 * In GIMP, Edit > Preferences > Interface > Display, Monitor Resolution, decrease automatically detected 305x305 ppi to 100x100 to fix [#20](https://github.com/kittenparry/dot-files/issues/20).
 * To fix Opera's video playback problem, get one of the releases of [nwjs-ffmpeg-prebuilt](https://github.com/iteufel/nwjs-ffmpeg-prebuilt/releases), put it into `/usr/lib64/opera`.
 * `imwheel` to "fix" the mouse scroll speed.
+* Install `dxvk` for "better" `wine` experience (sources: [reddit](https://www.reddit.com/r/linux_gaming/comments/856veg/what_is_dxvk_and_how_to_install/), [wine-vulkan](https://github.com/roderickc/wine-vulkan/blob/master/README.md)).
+	* Install `dxvk-bin`
+	* "c:\windows\winevulkan.json" in `~/.wine`:
+		```
+		{
+		"file_format_version": "1.0.0",
+		"ICD": {
+			"library_path": "c:\\windows\\system32\\winevulkan.dll",
+			"api_version": "1.0.51"
+    	}
+		}
+		```
+	* Add registry keys by `WINEPREFIX=~/.wine wine regedit`:
+		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers\]"C:\Windows\winevulkan.json"=dword:00000000`
+		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\Vulkan\Drivers\]"C:\Windows\winevulkan.json"=dword:00000000`
+	* Finally `WINEPREFIX=~/.wine setup_dxvk install`
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
