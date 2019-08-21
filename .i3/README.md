@@ -45,12 +45,12 @@
 		"ICD": {
 			"library_path": "c:\\windows\\system32\\winevulkan.dll",
 			"api_version": "1.0.51"
-    	}
+			}
 		}
 		```
 	* Add registry keys by `WINEPREFIX=~/.wine wine regedit`:
-		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers\]"C:\Windows\winevulkan.json"=dword:00000000`
-		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\Vulkan\Drivers\]"C:\Windows\winevulkan.json"=dword:00000000`
+		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers\] "C:\Windows\winevulkan.json"=dword:00000000`
+		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\Vulkan\Drivers\] "C:\Windows\winevulkan.json"=dword:00000000`
 	* Finally `WINEPREFIX=~/.wine setup_dxvk install`
 
 ### Stuff
