@@ -58,7 +58,7 @@
 	disks=({d..j} ga li ja)
 	for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
 	```
-
+* Install `winetricks` and `corefonts` with it to display lacking fonts.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
