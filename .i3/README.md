@@ -52,6 +52,13 @@
 		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\Vulkan\Drivers\] "C:\Windows\winevulkan.json"=dword:00000000`
 		* `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\Vulkan\Drivers\] "C:\Windows\winevulkan.json"=dword:00000000`
 	* Finally `WINEPREFIX=~/.wine setup_dxvk install`
+* `ln -s /mnt/disk-f/_suicidegirls/ ~/sg` SG symlink
+* Partition symlinks to home:
+	```bash
+	disks=({d..j} ga li ja)
+	for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
+	```
+
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
