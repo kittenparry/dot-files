@@ -12,7 +12,6 @@ scrot -z $pngfile
 # convert to bmp and pixelate
 magick convert -scale 20% -scale 500% $pngfile $bmpfile
 
-
 # Glitch it with sox FROM: https://maryknize.com/blog/glitch_art_with_sox_imagemagick_and_vim/
 sox -t ul -c 1 -r 48k $bmpfile -t ul $glitchedfile trim 0 100s : echo 0.9 0.9 15 0.9
 
