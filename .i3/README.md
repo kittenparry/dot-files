@@ -59,6 +59,7 @@
 	for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
 	```
 * Install `winetricks` and `corefonts` with it to display lacking fonts.
+* Getting keycodes/names with `xev` (`xorg-xev` package): `xev -event keyboard  | egrep -o 'keycode.*\)'`.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
