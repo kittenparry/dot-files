@@ -502,8 +502,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 #bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86HomePage exec amixer sset Master 5%+
-bindsym XF86Search exec exec amixer sset Master 5%-
+bindsym XF86Search exec amixer sset Master 5%+
+bindsym XF86HomePage exec exec amixer sset Master 5%-
 bindsym XF86Favorites exec amixer sset Master toggle
 
 # monitor name variables
