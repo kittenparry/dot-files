@@ -160,6 +160,7 @@ HISTFILESIZE=
 alias history='history | less'
 alias nano='nano -l'
 alias nnn='nnn -i'
+alias sgdwn='~/git/sgdwn/dwn'
 
 
 # dict $1 | less function (#15)
