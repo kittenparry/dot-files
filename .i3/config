@@ -671,15 +671,19 @@ for_window [class=$g_stellaris] focus
 
 set $t_ws4_1 "ws4_gotop_term"
 set $t_ws4_2 "ws4_empty_term"
+set $t_ws4_3 "ws4_nvidia_term"
 
 exec urxvt -name $t_ws4_2
 exec urxvt -name $t_ws4_1 -e gotop
+exec urxvt -name $t_ws4_3 -e watch -d nvidia-smi
 
-assign [instance=$t_ws4_2] $ws4
 assign [instance=$t_ws4_1] $ws4
+assign [instance=$t_ws4_2] $ws4
+assign [instance=$t_ws4_3] $ws4
 
-for_window [instance=$t_ws4_2] floating enable move position 765 180
 for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
+for_window [instance=$t_ws4_2] floating enable move position 765 180
+for_window [instance=$t_ws4_3] floating enable resize set 724 394, move position 765 554
 
 # instructions on getting the window information
 # sleep 3s && xdotool getactivewindow
