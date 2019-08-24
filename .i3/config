@@ -523,7 +523,8 @@ exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 set $t_lyrics "lyrics_term"
 
 # Custom binds
-bindsym $mod+Shift+x exec --no-startup-id blurlock
+# bindsym $mod+Shift+x exec --no-startup-id blurlock
+bindsym $mod+Shift+x exec ~/.scripts/_others/scrlock.sh
 bindsym $mod+Shift+z exec polybar-msg cmd toggle
 bindsym $mod+d exec rofi --no-startup-id -show run
 # grave is `
@@ -535,7 +536,8 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym Ctrl+Print exec gnome-screenshot -i
 bindsym $mod+F4 exec pamac-manager
 # best jokester on the planet, eh? definitely some original idea here (!)
-bindsym Control+Mod1+Delete exec --no-startup-id blurlock
+# bindsym Control+Mod1+Delete exec --no-startup-id blurlock
+bindsym Control+Mod1+Delete exec ~/.scripts/_others/scrlock.sh
 bindsym $mod+a exec ~/.scripts/sp
 
 # second monitor ws assign
