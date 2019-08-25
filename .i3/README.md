@@ -58,6 +58,7 @@
 	disks=({d..j} ga li ja)
 	for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
 	```
+* In `winecfg` add `winhttp` as native/builtin on Libraries tab for BepInEx to work properly.
 * Install `winetricks` and `corefonts` with it to display lacking fonts.
 * Getting keycodes/names with `xev` (`xorg-xev` package): `xev -event keyboard  | egrep -o 'keycode.*\)'`.
 
