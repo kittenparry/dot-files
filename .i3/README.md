@@ -55,8 +55,7 @@
 * `ln -s /mnt/disk-f/_suicidegirls/ ~/sg` SG symlink
 * Partition symlinks to home:
 	```bash
-	disks=({d..j} ga li ja)
-	for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
+	disks=({d..j} ga li ja); for d in "${disks[@]}"; do ln -s /mnt/disk-$d/ ~/$d; done
 	```
 * In `winecfg` add `winhttp` as native/builtin on Libraries tab for BepInEx to work properly.
 * Install `winetricks` and `corefonts` with it to display lacking fonts.
