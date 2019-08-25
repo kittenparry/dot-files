@@ -60,6 +60,7 @@
 * In `winecfg` add `winhttp` as native/builtin on Libraries tab for BepInEx to work properly.
 * Install `winetricks` and `corefonts` with it to display lacking fonts.
 * Getting keycodes/names with `xev` (`xorg-xev` package): `xev -event keyboard  | egrep -o 'keycode.*\)'`.
+* Before installing `spicetify-cli`: `sudo chmod 777 /opt/spotify -R` as instructed [in their notes section](https://github.com/khanhas/spicetify-cli/wiki/Installation#note-for-linux-users), original value is `755`.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
