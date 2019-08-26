@@ -161,8 +161,7 @@ alias history='history | less'
 alias nano='nano -l'
 alias nnn='nnn -i'
 alias sgdwn='~/git/sgdwn/dwn'
-alias dwnc='~/git/downloads-categoriser/mv_files'
-alias dwncr='~/git/downloads-categoriser/recreate_list'
+alias pddcat='~/git/downloads-categoriser/pddcat'
 
 
 # dict $1 | less function (#15)
