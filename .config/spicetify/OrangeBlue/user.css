@@ -3,3 +3,23 @@
  * that is unrelated to main_bg value in color.ini
  * issue tracking: https://github.com/khanhas/spicetify-cli/issues/57
  */
+.LeftSidebar__scroll-section,
+.glue-page-header__sticky-inner,
+.glue-page-header__sticky,
+.content-top-bar__profile,
+.content-top-bar__history-navigation,
+.content-top-bar,
+.browser-navigation,
+#header,
+.LeftSidebar,
+.sidebar-top-items,
+.sidebar .sidebar-navbar,
+#new-playlist-button-mount-point,
+.player-bar-wrapper {
+	background-color: var(--modspotify_sidebar_and_player_bg);
+}
+
+.scroll-text-container:after {
+	/* gradient effect on song-artist bottom left */
+	background: var(--modspotify_sidebar_and_player_bg) !important;
+}
