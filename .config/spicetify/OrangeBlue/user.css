@@ -4,8 +4,8 @@
  * issue tracking: https://github.com/khanhas/spicetify-cli/issues/57
  */
 .LeftSidebar__scroll-section,
-.glue-page-header__sticky-inner,
-.glue-page-header__sticky,
+/* .glue-page-header__sticky-inner,
+.glue-page-header__sticky, */
 .content-top-bar__profile,
 .content-top-bar__history-navigation,
 .content-top-bar,
@@ -15,7 +15,9 @@
 .sidebar-top-items,
 .sidebar .sidebar-navbar,
 #new-playlist-button-mount-point,
-.player-bar-wrapper {
+.player-bar-wrapper,
+.Header__sticky-inner,
+.Header__background {
 	background-color: var(--modspotify_sidebar_and_player_bg);
 }
 
