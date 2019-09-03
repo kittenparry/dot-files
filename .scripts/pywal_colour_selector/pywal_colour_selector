@@ -9,6 +9,11 @@
 # You should add wal -f scheme.json to your starting scripts
 # And maybe with the option -R for it to stick
 
+# TODO:
+# - get array from filenames by reading the directory
+# - depending on the option -l or -d provided, read from one of the directories
+# - likely replace my edited filenames with actual files for light schemes
+
 # array of filenames
 colours=(
 	16-solarized
