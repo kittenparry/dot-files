@@ -635,6 +635,7 @@ set $g_dota "dota2"
 set $g_eu4 "eu4"
 set $g_factorio "factorio"
 set $g_isaac "Binding of Isaac: Afterbirth+"
+set $g_payday "payday2_release"
 set $g_rimworld "RimWorldLinux.x86_64"
 set $g_soft_inc "Software Inc.x86_64"
 set $g_stellaris "stellaris"
@@ -652,6 +653,7 @@ assign [class=$g_dota] $ws19
 assign [class=$g_eu4] $ws19
 assign [class=$g_factorio] $ws19
 assign [class=$g_isaac] $ws19
+assign [class=$g_payday] $ws19
 assign [class=$g_rimworld] $ws19
 assign [class=$g_soft_inc] $ws19
 assign [class=$g_stellaris] $ws19
@@ -664,6 +666,7 @@ for_window [class=$g_borderlands] fullscreen enable
 for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_isaac] fullscreen enable
+for_window [class=$g_payday] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
 for_window [class=$g_soft_inc] fullscreen enable
 for_window [class=$g_underlords] fullscreen enable
