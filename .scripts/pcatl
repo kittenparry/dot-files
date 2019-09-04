@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+# a python port of catl
+# https://github.com/kittenparry/dot-files/blob/master/.scripts/catl
+
+import os
+import datetime
+
+LOGS = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Other', 'myLogs.txt')
+
+def start():
+	print(LOGS)
+	today = datetime.date.today()
+	delta = datetime.timedelta(days = 5)
+	five_ago = today - delta
+	print(five_ago.strftime('%Y.%m.%d'))
+	print(today)
+
+
+if __name__ == '__main__':
+	start()
