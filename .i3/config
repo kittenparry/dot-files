@@ -551,6 +551,7 @@ workspace $ws7 output $mon1
 # the above also boots into ws19 so i'm adding below
 workspace $ws1 output $mon1
 # workspace $ws9 output $mon2
+
 # no mouse focus
 focus_follows_mouse no
 # don't move mouse to the other display on focus change
