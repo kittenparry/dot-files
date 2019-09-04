@@ -543,14 +543,13 @@ bindsym $mod+F4 exec pamac-manager
 bindsym Control+Mod1+Delete exec ~/.scripts/_others/scrlock.sh
 bindsym $mod+a exec ~/.scripts/sp
 
+# actually actually fix booting into ws19
+workspace $ws1 output $mon1
 # second monitor ws assign
 workspace $ws20 output $mon2
 # make sure ws19 never spawns on second monitor
 workspace $ws19 output $mon1
 workspace $ws7 output $mon1
-workspace $ws1 output $mon1
-# actually fix booting into ws19
-exec --no-startup-id i3-msg workspace $ws1
 
 # no mouse focus
 focus_follows_mouse no
