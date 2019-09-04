@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # a python port of catl
+# incomplete as of now
 # https://github.com/kittenparry/dot-files/blob/master/.scripts/catl
 
 import os

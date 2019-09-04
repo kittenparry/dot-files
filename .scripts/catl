@@ -68,6 +68,7 @@ if [[ -z "${arg+x}" && -z "${length+x}" && -z "${day+x}" ]]; then
 	arg=`date +%Y.%m.%d`
 fi
 
+# format today's date with "-d N day ago" if given a negative value through -d
 # set arg as date of the given day
 # append a leading 0 if only 1 digit is entered
 if [ -n "${day+x}" ]; then
