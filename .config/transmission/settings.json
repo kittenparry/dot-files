@@ -1,6 +1,8 @@
 {
-	"download-dir": "/mnt/disk-j/lin_downs",
+	"download-dir": "/mnt/disk-j/lin_downs_c",
 	"download-queue-size": 15,
+	"incomplete-dir": "/mnt/disk-j/lin_downs",
+	"incomplete-dir-enabled": true,
 	"ratio-limit": 0,
 	"ratio-limit-enabled": true,
 	"show-notification-area-icon": true,
