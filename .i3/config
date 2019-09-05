@@ -640,6 +640,7 @@ set $g_isaac "Binding of Isaac: Afterbirth+"
 set $g_payday "payday2_release"
 set $g_rimworld "RimWorldLinux.x86_64"
 set $g_soft_inc "Software Inc.x86_64"
+set $g_stardew "StardewValley.bin.x86_64"
 set $g_stellaris "stellaris"
 set $g_underlords "underlords"
 set $g_xcom2 "XCOM2"
@@ -658,6 +659,7 @@ assign [class=$g_isaac] $ws19
 assign [class=$g_payday] $ws19
 assign [class=$g_rimworld] $ws19
 assign [class=$g_soft_inc] $ws19
+assign [class=$g_stardew] $ws19
 assign [class=$g_stellaris] $ws19
 assign [class=$g_underlords] $ws19
 assign [class=$g_xcom2] $ws19
