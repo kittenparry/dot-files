@@ -617,6 +617,7 @@ for_window [class="Simplenote"] floating enable
 for_window [instance=$t_lyrics] floating enable
 for_window [class="Sgdwn"] floating enable
 for_window [class="Duplicate_finder"] floating enable
+for_window [class="kazatzka"] floating enable
 
 
 ########################
