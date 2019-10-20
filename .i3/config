@@ -558,9 +558,9 @@ force_focus_wrapping yes
 # start with
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec steam
-exec spotify --no-startup-id --disable-smooth-scrolling
-exec discord --no-startup-id --disable-smooth-scrolling
+exec --no-startup-id steam
+exec --no-startup-id spotify --disable-smooth-scrolling
+exec --no-startup-id discord --disable-smooth-scrolling
 exec ~/.scripts/run_log_recorder
 exec --no-startup-id dropbox start
 # exec --no-startup-id deluge
@@ -695,9 +695,9 @@ set $t_ws4_1 "ws4_gotop_term"
 set $t_ws4_2 "ws4_empty_term"
 set $t_ws4_3 "ws4_nvidia_term"
 
-exec urxvt -name $t_ws4_2
-exec urxvt -name $t_ws4_1 -e gotop
-exec urxvt -name $t_ws4_3 -e watch -d nvidia-smi
+exec --no-startup-id urxvt -name $t_ws4_2
+exec --no-startup-id urxvt -name $t_ws4_1 -e gotop
+exec --no-startup-id urxvt -name $t_ws4_3 -e watch -d nvidia-smi
 
 assign [instance=$t_ws4_1] $ws4
 assign [instance=$t_ws4_2] $ws4
@@ -706,6 +706,8 @@ assign [instance=$t_ws4_3] $ws4
 for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
 for_window [instance=$t_ws4_2] floating enable move position 765 180
 for_window [instance=$t_ws4_3] floating enable resize set 724 394, move position 765 554
+
+exec sleep 2s && exec ~/.scripts/nvidia_term_colour_fix
 
 # instructions on getting the window information
 # sleep 3s && xdotool getactivewindow
