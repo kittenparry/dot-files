@@ -162,6 +162,7 @@ alias nano='nano -l'
 alias nnn='nnn -i'
 alias sgdwn='~/git/sgdwn/dwn'
 alias pddcat='~/git/downloads-categoriser/pddcat'
+alias psort='~/git/downloads-categoriser/extras/sort_curated_list'
 
 
 # dict $1 | less function (#15)
