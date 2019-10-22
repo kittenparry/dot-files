@@ -5,8 +5,7 @@
 # https://github.com/kittenparry/small-scripts/blob/master/bat/rpa_extractor.bat
 # Usage: rpa game_dir_path relative_output_dir_path
 
-main_dir=/mnt/disk-f/_rpaextractor
-cd $main_dir
+cd /mnt/disk-f/_rpaextractor
 for i in $(ls $1/*.rpa); do
 	wine RPAExtractor.exe -v -x "$i" -o "out/$2"
 done
