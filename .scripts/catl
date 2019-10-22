@@ -5,10 +5,11 @@
 path=~/Dropbox/Other/myLogs.txt
 help_d=$'Usage: catl -d -n..31\nfor "-d" search: catl -d 0'
 help_l=$'Usage: catl -l 1..n\nfor "-l" search: catl -l 0'
-help_h=$'Usage: catl [OPTIONS]
+help_h=$'Usage: catl [-h] [-d INT] [-l INT]
 
 Options:
-  -d -n..31\tGrep entries with given day of the month. Or a negative value for N day(s) ago.
+  -d -n..31\tGrep entries with given day of the month.
+	\tOr a negative value for N day(s) ago.
 	\t-d 0 to grep "-d"
   -l 1..n\tGrep the last N entries.
 	\t-l 0 to grep "-l"
