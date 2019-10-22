@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# rpa extractor command with a for loop to help the extraction of all files in a path
+# direct port of its batch counterpart
+# https://github.com/kittenparry/small-scripts/blob/master/bat/rpa_extractor.bat
+# Usage: rpa game_dir_path relative_output_dir_path
+
+main_dir=/mnt/disk-f/_rpaextractor
+cd $main_dir
+for i in $(ls $1/*.rpa); do
+	wine RPAExtractor.exe -v -x "$i" -o "out/$2"
+done
