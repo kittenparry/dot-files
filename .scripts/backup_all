@@ -7,7 +7,7 @@
 # then output them all at once, instead of getting inline errors
 
 pre_s='done \t'
-pre_f='fail \t'
+pre_f='\033[1m\033[91mfail\033[0m \t'
 pre=''
 msg=''
 
