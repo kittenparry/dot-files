@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# will be ex with a filename to output dir functionality
+# ex() with filename to output dir functionality
 
 file=$1
 dir="${file%.*}"
