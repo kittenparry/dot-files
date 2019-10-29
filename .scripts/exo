@@ -4,8 +4,14 @@
 
 file=$1
 dir="${file%.*}"
-ext="${file##*.}"
 
-# TODO: different functionality depending on extension
-# FIXME: likely doesn't need mkdir
-mkdir -p $dir && 7z x $file -o$dir
+if [ -f "$file" ]; then
+	case $file in
+		*.7z)  7z x "$file" -o"$dir"   ;;
+		*.rar) unrar x "$file" "$dir"  ;;
+		*.zip) unzip "$file" -d "$dir" ;;
+		*)     echo "'$file' could not be extracted with exo." ;;
+	esac
+else
+	echo "'$file' is not a valid file."
+fi
