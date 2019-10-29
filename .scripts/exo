@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# will be ex with a filename to output dir functionality
+
+file=$1
+dir="${file%.*}"
+ext="${file##*.}"
+
+# TODO: different functionality depending on extension
+# FIXME: likely doesn't need mkdir
+mkdir -p $dir && 7z x $file -o$dir

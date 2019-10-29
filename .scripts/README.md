@@ -11,6 +11,7 @@
 - `backup_all` - General back up of somewhat important files
 - `blogs` - Back up myLogs.txt to different partitions & directories with dates
 - `catl` - `grep` from myLogs.txt
+- `exo` - (ex)[https://github.com/kittenparry/dot-files/blob/54928e73868e6a179fef104f3e77eecde842be9a/.bashrc#L119] with filename to output directory
 - `move` - Organise files in Downloads based on extensions
 - `nvidia_term_colour_fix` - Colour scheme fix for `nvidia-smi` terminal on ws4
 - `pcatl` - An incomplete Python port of `catl`
