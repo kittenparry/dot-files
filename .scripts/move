@@ -22,7 +22,7 @@ ex_oth=(
 	scs swf ods db xml ini sh php ogx save
 	htmlz h class rpa rpy sav package ttf bk2 csv
 	renpy srt apk sdltm dll py pak vsix icns circ
-	pls bat c
+	pls bat c pyw md ila cfg
 )
 exs=(ex_tor ex_img ex_web ex_exe ex_com ex_vid ex_oth)
 
