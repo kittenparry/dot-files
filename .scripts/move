@@ -40,7 +40,6 @@ done
 cd $dwn
 
 # -v verbose, makes it so you can see the file is moved (#11)
-#   currently not that pretty looking because of all the cannot stat errors (#9)
 # -n if the filename already exists, won't move
 
 # check and move
