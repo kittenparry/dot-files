@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# organise downloads directory using pddcat
+# https://github.com/kittenparry/pddcat
+
+arch=/mnt/disk-e/archxdwn/porn
+
+move
+pddcat -ts ~/dwn/f.img -td $arch/img
+pddcat -ts ~/dwn/f.vid -td $arch/vid
