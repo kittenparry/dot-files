@@ -101,4 +101,4 @@
 * `ex` to extract compressed files instead of `unzip`, `unrar x`, `7z x` and what not. Apparently [this](https://github.com/kittenparry/dot-files/blob/29f19cb94c951a547bafe4ba6c4bb4964cc869b7/.bashrc#L119) has been sitting here since the beginning.
 * `lolcal` and `colorit` for colouring the output.
 * `nvidia-smi` to check GPU usage. `watch -d -n 0.5 nvidia-smi` to watch it. `-d` highlights changed values, `-n %n` is to update it with given interval, default is 2s.
-* `df -kh .` to get disk space information on current dir/partition.
+* `df -h .` to get disk space information on current dir/partition.
