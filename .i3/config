@@ -640,6 +640,7 @@ set $g_ftl "FTL.amd64"
 set $g_isaac "Binding of Isaac: Afterbirth+"
 set $g_payday "payday2_release"
 set $g_rimworld "RimWorldLinux.x86_64"
+set $g_runescape "net-runelite-launcher-Launcher"
 set $g_slay_spire "Slay the Spire"
 set $g_soft_inc "Software Inc.x86_64"
 set $g_stardew "StardewModdingAPI.bin.x86_64"
@@ -663,6 +664,7 @@ assign [class=$g_ftl] $ws19
 assign [class=$g_isaac] $ws19
 assign [class=$g_payday] $ws19
 assign [class=$g_rimworld] $ws19
+assign [class=$g_runescape] $ws19
 assign [class=$g_slay_spire] $ws19
 assign [class=$g_soft_inc] $ws19
 assign [class=$g_stardew] $ws19

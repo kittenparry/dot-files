@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# ability to launch osrs from rofi
+
+~/games/RuneLite.AppImage
