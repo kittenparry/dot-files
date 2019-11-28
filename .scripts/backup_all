@@ -66,7 +66,15 @@ if cp /mnt/disk-f/_suicidegirls/__n/log_arch ~/Dropbox/sg/; then
 else
 	pre=$pre_f
 fi
-msg+="$pre sg arch log"
+msg+="$pre sg arch log\n"
+
+# runelite screenshots (osrs)
+if cp -r ~/.runelite/screenshots/* ~/Dropbox/runelite/screenshots/; then
+	pre=$pre_s
+else
+	pre=$pre_f
+fi
+msg+="$pre runelite screenshots"
 
 
 echo -e "$msg"
