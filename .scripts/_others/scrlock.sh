@@ -29,5 +29,5 @@ magick convert -gravity center -font "Font-Awesome-5-Free-Solid" \
 
 # -u disables circle indicator when entering characters
 # -e doesn't try to authenticate when no character is entered
-i3lock -e -u -i $pngfile
+i3lock -e -i $pngfile
 rm $pngfile $bmpfile $glitchedfile
