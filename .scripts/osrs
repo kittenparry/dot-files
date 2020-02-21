@@ -2,4 +2,4 @@
 
 # ability to launch osrs from rofi
 
-~/games/RuneLite.AppImage
+~/games/RuneLite.AppImage --mode=OFF
