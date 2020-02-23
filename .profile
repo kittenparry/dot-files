@@ -10,3 +10,5 @@ fi
 export BAT_THEME="GitHub" # GitHub or base16 for light theme
 # fixes VLC and Calibre's scaling issue (#20)
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
+# mouse scrollable less
+export LESS='--mouse --wheel-lines=3'
