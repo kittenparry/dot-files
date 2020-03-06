@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# all local backing up scripts combined into one
+# -e enables translation of \t
+
+# append success or failure depending on the outcome of commands to each message
+# then output them all at once, instead of getting inline errors
+
+pre_s='done \t'
+pre_f='\033[1m\033[91mfail\033[0m \t'
+pre=''
+msg="---local---\n"
+
+
+# runelite screenshots (osrs)
+if cp -r ~/.runelite/screenshots/* /mnt/disk-g/_runelite/screenshots/; then
+	pre=$pre_s
+else
+	pre=$pre_f
+fi
+msg+="$pre runelite screenshots"
+
+
+echo -e "$msg"

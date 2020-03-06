@@ -166,6 +166,7 @@ alias psort='~/git/pddcat/extras/sort_curated_list'
 alias dupl='~/git/duplicate-finder/duplicate_finder'
 alias ordwn='. ordwn'
 alias fd='fd -i'
+alias bup='blogs && backup_dropbox && backup_local'
 
 
 # dict $1 | less function (#15)
