@@ -63,6 +63,8 @@
 * Getting keycodes/names with `xev` (`xorg-xev` package): `xev -event keyboard  | egrep -o 'keycode.*\)'`.
 * Before installing `spicetify-cli`: `sudo chmod 777 /opt/spotify -R` as instructed [in their notes section](https://github.com/khanhas/spicetify-cli/wiki/Installation#note-for-linux-users), original value is `755`.
 * The Sims 4 mods directory symlink: `ln -s /mnt/disk-ja/sims4/Mods "$HOME/Documents/Electronic Arts/The Sims 4/Mods"`
+* `sudo pacman -Sy archlinux-keyring manjaro-keyring` to fix "broken" AUR keys*. Or maybe use a different server like `gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-key $KEY`.
+	* `sudo pacman-key --populate archlinux manjaro` as well as `sudo pacman-key --refresh-keys`, though the second one doesn't seem to work.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
