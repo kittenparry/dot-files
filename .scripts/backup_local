@@ -13,7 +13,7 @@ msg="---local---\n"
 
 
 # runelite screenshots (osrs)
-if cp -r ~/.runelite/screenshots/* /mnt/disk-g/_runelite/screenshots/; then
+if cp -ruv ~/.runelite/screenshots/* /mnt/disk-g/_runelite/screenshots/; then
 	pre=$pre_s
 else
 	pre=$pre_f
