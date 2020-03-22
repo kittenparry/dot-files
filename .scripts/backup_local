@@ -11,6 +11,7 @@ pre_f='\033[1m\033[91mfail\033[0m \t'
 pre=''
 msg="---local---\n"
 
+echo "-----------"
 
 # runelite screenshots (osrs)
 if cp -ruv ~/.runelite/screenshots/* /mnt/disk-g/_runelite/screenshots/; then
