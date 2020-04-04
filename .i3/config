@@ -576,11 +576,11 @@ exec xdotool key Num_Lock
 exec imwheel
 
 # assign to workspaces
-assign [class="Opera"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
 assign [class="Tor Browser"] $ws2
 assign [class="Logrecorder"] $ws4
-assign [class="Google-chrome"] $ws5
+assign [class="Opera"] $ws5
 assign [class="com-tonikelope-megabasterd-MainPanel"] $ws5
 assign [class="Pcmanfm"] $ws6
 assign [class="Steam"] $ws7
@@ -638,6 +638,7 @@ set $g_eu4 "eu4"
 set $g_factorio "factorio"
 set $g_ftl "FTL.amd64"
 set $g_isaac "Binding of Isaac: Afterbirth+"
+set $g_openttd "openttd"
 set $g_payday "payday2_release"
 set $g_rimworld "RimWorldLinux.x86_64"
 set $g_runescape "net-runelite-launcher-Launcher"
@@ -663,6 +664,7 @@ assign [class=$g_eu4] $ws19
 assign [class=$g_factorio] $ws19
 assign [class=$g_ftl] $ws19
 assign [class=$g_isaac] $ws19
+assign [class=$g_openttd] $ws19
 assign [class=$g_payday] $ws19
 assign [class=$g_rimworld] $ws19
 assign [class=$g_runescape] $ws19
@@ -683,6 +685,7 @@ for_window [class=$g_csgo] fullscreen enable
 for_window [class=$g_dota] fullscreen enable
 for_window [class=$g_ftl] fullscreen enable
 for_window [class=$g_isaac] fullscreen enable
+for_window [class=$g_openttd] fullscreen enable
 for_window [class=$g_payday] fullscreen enable
 for_window [class=$g_rimworld] fullscreen enable
 for_window [class=$g_slay_spire] fullscreen enable
