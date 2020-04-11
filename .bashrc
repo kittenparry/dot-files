@@ -159,7 +159,7 @@ HISTFILESIZE=
 # ALIASES
 alias history='history | less'
 alias nano='nano -l'
-alias nnn='nnn -i'
+alias nnn='nnn -n'
 alias sgdwn='~/git/sgdwn/dwn'
 alias pddcat='~/git/pddcat/pddcat'
 alias psort='~/git/pddcat/extras/sort_curated_list'
