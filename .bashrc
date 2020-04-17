@@ -167,6 +167,7 @@ alias dupl='~/git/duplicate-finder/duplicate_finder'
 alias ordwn='. ordwn'
 alias fd='fd -i'
 alias bup='blogs && backup_dropbox && backup_local'
+alias yd='youtube-dl -r 4M'
 
 
 # dict $1 | less function (#15)
