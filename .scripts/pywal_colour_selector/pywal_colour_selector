@@ -9,38 +9,23 @@
 # You should add wal -f scheme.json to your starting scripts
 # And maybe with the option -R for it to stick
 
-# TODO:
-# - get array from filenames by reading the directory
-# - depending on the option -l or -d provided, read from one of the directories
-# - likely replace my edited filenames with actual files for light schemes
+if [ "$1" == "-l" ]
+then
+	tone="light"
+else
+	tone="dark"
+fi
+
+# path to .json files
+path=~/.scripts/pywal_colour_selector/${tone}/
 
 # array of filenames
-colours=(
-	16-solarized
-	cave
-	classic
-	cupcake
-	default
-	gruvbox-medium
-	gruvbox-soft
-	harmonic
-	heath
-	materialer
-	mexico
-	one
-	plateau
-	solarized
-	sulphurpool
-	tempus_past
-	tomorrow
-)
-# path to .json files
-path=~/.scripts/pywal_colour_selector/lights/
+colours=(${path}/*.json)
 
 # incremental number
 opt=1
 # display selection with numbers
-for i in "${colours[@]}"
+for i in "${colours[@]##*/}"
 do
 	echo "$opt: $i"
 	opt=$((opt+1))
@@ -50,16 +35,13 @@ done
 while :
 do
 	# no new line input
+	echo "Selection between 1-${#colours[@]}."
 	printf "Select one:"
 	read -r input
 	if [ $input -ge 1 -a $input -le ${#colours[@]} ]
 	then
 		break
 	fi
-	echo "Selection between 1-${#colours[@]}."
 done
 
-wal -f "$path${colours[$input-1]}.json"
-
-# notes
-# ${#colours[@]} arr length
+wal -f "$path${colours[$input-1]##*/}"
