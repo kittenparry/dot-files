@@ -231,8 +231,8 @@ ws-icon-12 = 13; 
 ws-icon-13 = 14; 
 # FA-icon: user
 ws-icon-14 = 15; 
-# FA-icon: user
-ws-icon-15 = 16; 
+# FA-icon: envelope
+ws-icon-15 = 16; 
 # FA-icon: paint-brush
 ws-icon-16 = 17; 
 # FA-icon: save

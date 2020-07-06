@@ -593,6 +593,7 @@ assign [class="Quodlibet"] $ws11
 assign [class="Simplenote"] $ws12
 # hydrus client, hope it won't clash with other possible class names
 assign [class="Client"] $ws13
+assign [class="TelegramDesktop"] $ws16
 assign [class="Aseprite"] $ws17
 assign [class="Lutris"] $ws18
 assign [class="Spotify"] $ws20
@@ -617,6 +618,7 @@ for_window [class="Sgdwn"] floating enable
 for_window [class="Duplicate_finder"] floating enable
 for_window [class="kazatzka"] floating enable
 for_window [class="economy-board-game-electron"] floating enable
+for_window [class="TelegramDesktop"] floating enable
 
 
 ########################
