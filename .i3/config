@@ -595,6 +595,7 @@ assign [class="Simplenote"] $ws12
 assign [class="Client"] $ws13
 assign [class="TelegramDesktop"] $ws16
 assign [class="Aseprite"] $ws17
+assign [class="Dust3D"] $ws17
 assign [class="Lutris"] $ws18
 assign [class="Spotify"] $ws20
 assign [class="discord"] $ws20
