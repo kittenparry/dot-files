@@ -13,3 +13,13 @@
   nameserver 8.8.8.8
   Repeat step 3 and 4. You will see git working fine now.
   ```
+- Enabling X display:
+  - Install Xming
+  - Install VcXsrv
+  - Launch XLaunch, disable access control
+  - Add following to `.bashrc`:
+    ```
+    export DISPLAY=$(ip route | awk '{print $3; exit}'):0
+    export LIBGL_ALWAYS_INDIRECT=1
+    ```
+  - Voilà! `sxiv` on Windows.
