@@ -2,5 +2,5 @@
 
 # fix lighter than usual nvidia-smi terminal on ws4 (#43 on GitHub)
 
-wal -f ~/.scripts/pywal_colour_selector/lights/16-solarized.json
+wal -f ~/.scripts/pywal_colour_selector/light/16-solarized.json
 xrdb ~/.Xresources
