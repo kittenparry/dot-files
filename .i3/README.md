@@ -65,6 +65,7 @@
 * The Sims 4 mods directory symlink: `ln -s /mnt/disk-ja/sims4/Mods "$HOME/Documents/Electronic Arts/The Sims 4/Mods"`
 * `sudo pacman -Sy archlinux-keyring manjaro-keyring` to fix "broken" AUR keys*. Or maybe use a different server like `gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-key $KEY`.
 	* `sudo pacman-key --populate archlinux manjaro` as well as `sudo pacman-key --refresh-keys`, though the second one doesn't seem to work.
+* `pavucontrol` to "better" control audio devices.
 
 ### Stuff
 * `rofi` is used instead of `dmenu`.
